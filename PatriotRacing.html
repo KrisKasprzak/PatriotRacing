@@ -1,0 +1,3703 @@
+<!DOCTYPE html>
+<html lang="en" class="js-focus-visible">
+<title>PATRIOT RACING</title>
+<style>
+table {
+font-family: "Arial";
+font-size: 20px;
+border-collapse: collapse;
+}
+th {
+height: 20px;
+padding: 3px 15px;
+background-color: #343a40;
+}
+td {
+border: 1px solid;
+border-color: rgb(60,60,60);
+height: 20px;
+padding: 3px 15px;
+}
+.navbar {
+width: 100%;
+height: 50px;
+margin: 0;
+padding: 10px 0px;
+background-color: #FFF;
+border-bottom: 5px solid #293578;
+position: fixed;
+background-color: #333333;
+top: 0;
+right: 0;
+left: 0;
+z-index: 1;
+}
+.navtitle {
+position: absolute;
+color: #FFFFFF;
+font-family: "Arial";
+font-size: 40px;
+font-weight: bold;
+line-height: 30px;
+left: 10px;
+}
+.navver {
+position: absolute;
+color: #888888;
+font-family: "Arial";
+font-size: 30px;
+font-weight: normal;
+line-height: 60px;
+left: 400px;
+}
+.navheading {
+position: absolute;
+left: 1400px;
+top: 15px;
+color: white;
+font-family: "Arial";
+font-size: 28px;
+font-weight: bold;
+}
+.navdata {
+position: absolute;
+left: 1600px;
+top: 15px;
+color: white;
+font-family: "Arial";
+font-size: 28px;
+font-weight: bold;
+}
+.hed {
+font-family: "Arial";
+font-weight: bold;
+font-size: 22px;
+line-height: 24px;
+text-align: center;
+}
+.hedR {
+font-family: "Arial";
+font-weight: bold;
+font-size: 22px;
+line-height: 24px;
+text-align: center;
+}
+.hedW {
+font-family: "Arial";
+font-weight: bold;
+font-size: 22px;
+line-height: 24px;
+text-align: center;
+}
+.hedB {
+font-family: "Arial";
+font-weight: bold;
+font-size: 22px;
+line-height: 24px;
+text-align: center;
+}
+.para {
+font-family: "Arial";
+font-weight: normal;
+font-size: 20px;
+color: white;
+text-align: left;
+font-weight: light;
+}
+.r_cd {
+font-family: "Arial";
+font-size: 20px;
+text-align: right;
+padding-right: 5px;
+padding-top: 5px;
+height: 25px;
+border-radius: 5px;
+color: white;
+line-height: 20px;
+}
+.w_cd {
+font-family: "Arial";
+font-size: 20px;
+text-align: right;
+padding-right: 5px;
+padding-top: 5px;
+height: 25px;
+border-radius: 5px;
+color: white;
+line-height: 20px;
+}
+.b_cd {
+font-family: "Arial";
+font-size: 20px;
+text-align: right;
+padding-right: 5px;
+padding-top: 5px;
+height: 25px;
+border-radius: 5px;
+color: white;
+line-height: 20px;
+}
+.container {
+max-width: 1880px;
+font-family: "Arial";
+font-weight: normal;
+font-size: 16px;
+color: white;
+text-align: left;
+font-weight: light;
+left: 5px;
+position: relative;
+padding-left: 10px;
+}
+table tr:first-child th:first-child {
+border-top-left-radius: 5px;
+}
+table tr:first-child th:last-child {
+border-top-right-radius: 5px;
+}
+table tr:last-child td:first-child {
+border-bottom-left-radius: 5px;
+}
+table tr:last-child td:last-child {
+border-bottom-right-radius: 5px;
+}
+.cb_v {
+position: relative;
+left: 10px;
+top: 5px;
+}
+.cb_la {
+position: relative;
+left: 87px;
+top: 5px;
+}
+.cb_lnrg {
+position: relative;
+left: 164px;
+top: 5px;
+}
+.cb_a {
+position: relative;
+left: 241px;
+top: 5px;
+}
+.cb_t {
+position: relative;
+left: 318px;
+top: 5px;
+}
+.cb_s {
+position: relative;
+left: 395px;
+top: 5px;
+}
+.cb_lt {
+position: relative;
+left: 472px;
+top: 5px;
+}
+.cb_nrg{
+position: relative;
+left: 549px;
+top: 5px;
+}
+.cb_alt {
+position: relative;
+left: 626px;
+top: 5px;
+}
+.cb_esc {
+position: relative;
+left: 703px;
+top: 5px;
+}
+
+.cb_pm {
+position: relative;
+left: 773px;
+top: 5px;
+}
+.cb_tm {
+position: relative;
+left: 813px;
+top: 5px;
+}
+.cb_rl {
+position: relative;
+left: 853px;
+top: 5px;
+}
+
+.gph {
+position: absolute;
+}
+input[type=checkbox] {
+width: 25px;
+height: 25px;
+cursor: pointer;
+}
+input[type=radio] {
+height: 25px;
+width: 25px;
+cursor: pointer;
+}
+.gf_n {
+position: absolute;
+top: 263px;
+left: 1390px;
+accent-color: #333333;
+}
+.gf_x {
+position: absolute;
+top: 263px;
+left: 1435px;
+border-color: #FF0000;
+accent-color: #FF0000;
+}
+.gf_y {
+position: absolute;
+top: 263px;
+left: 1480px;
+accent-color: #00FF00;
+}
+.gf_z {
+position: absolute;
+top: 263px;
+left: 1525px;
+accent-color: #0000FF;
+}
+.rb_a {
+position: absolute;
+left: 1600px;
+accent-color: #333333;
+top: 263px;
+}
+.rb_r {
+position: absolute;
+left: 1645px;
+border-color: #FF0000;
+accent-color: #FF0000;
+top: 263px;
+}
+.rb_w {
+position: absolute;
+left: 1690px;
+accent-color: #CCCCCC;
+top: 263px;
+}
+.rb_b {
+position: absolute;
+left: 1735px;
+accent-color: #0000FF;
+top: 263px;
+}
+.fit {
+position: absolute;
+left: 1810px;
+top: 260px;
+width: 60px;
+text-align: center;
+font-size: 16px;
+cursor: pointer;
+}
+
+</style>
+<body style="background-color: #010101" onload="process()">
+<header>
+<div class="navbar">
+<span class="navtitle">PATRIOT RACING<sup>&copy</sup></span><span class="navver">V7.02</span>
+<div class="navheading">RACE TIME</div>
+<div class="navdata" id="car_race_time">00:00</div>
+</div>
+</header>
+<main class="container" style="margin-top:80px">
+<table style="width:99%">
+<colgroup>
+<col span="1" style="background-color:rgb(40,40,40);width: 9%">
+<col span="1" style="background-color:rgb(10,10,10);width: 6%">
+<col span="1" style="background-color:rgb(10,10,10);width: 6%">
+<col span="1" style="background-color:rgb(10,10,10);width: 6%">
+<col span="1" style="background-color:rgb(50,50,50);width: 9%">
+<col span="1" style="background-color:rgb(10,10,10);width: 6%">
+<col span="1" style="background-color:rgb(10,10,10);width: 6%">
+<col span="1" style="background-color:rgb(10,10,10);width: 6%">
+<col span="1" style="background-color:rgb(40,40,40);width: 9%">
+<col span="1" style="background-color:rgb(10,10,10);width: 6%">
+<col span="1" style="background-color:rgb(10,10,10);width: 6%">
+<col span="1" style="background-color:rgb(10,10,10);width: 6%">
+</colgroup>
+<tr>
+<th colspan="4" div class="hed" style="background-color:rgb(40,40,40);color:rgb(255,255,255)">Car Performance</div></th>
+<th colspan="4" div class="hed" style="background-color:rgb(60,60,60);color:rgb(255,255,255)">Race Data</div></th>
+<th colspan="4" div class="hed" style="background-color:rgb(40,40,40);color:rgb(255,255,255)">Predictive Statistics</div></th>
+</tr>
+<tr>
+<th colspan="1" div class="hed" style="background-color:rgb(40,40,40);color:rgb(255,255,255)">Data</div></th>
+<th colspan="1" div id="r_did" class="hedR" style="background-color:rgb(40,40,40);color:rgb(250,50,0)">5</div></th>
+<th colspan="1" div id="w_did" class="hedW" style="background-color:rgb(40,40,40);color:rgb(250,250,250)">15</div></th>
+<th colspan="1" div id="b_did" class="hedB" style="background-color:rgb(40,40,40);color:rgb(0,100,250)">1</div></th>
+<th colspan="1" div class="hed" style="background-color:rgb(60,60,60);color:rgb(255,255,255)">Data</div></th>
+<th colspan="1" div class="hedR" style="background-color:rgb(60,60,60);color:rgb(250,50,0)">5</div></th>
+<th colspan="1" div class="hedW" style="background-color:rgb(60,60,60);color:rgb(250,250,250)">15</div></th>
+<th colspan="1" div class="hedB" style="background-color:rgb(60,60,60);color:rgb(0,100,250)">1</div></th>
+<th colspan="1" div class="hed" style="background-color:rgb(40,40,40);color:rgb(255,255,255)">Data</div></th>
+<th colspan="1" div class="hedR" style="background-color:rgb(40,40,40);color:rgb(250,50,0)">5</div></th>
+<th colspan="1" div class="hedW" style="background-color:rgb(40,40,40);color:rgb(250,250,250)">15</div></th>
+<th colspan="1" div class="hedB" style="background-color:rgb(40,40,40);color:rgb(0,100,250)">1</div></th>
+</tr>
+<tr>
+<td><div class="para" id="DB1">Volts</div></td>
+<td><div class="r_cd" id="r_vlt"></div></td>
+<td><div class="w_cd" id="w_vlt"></div></td>
+<td><div class="b_cd" id="b_vlt"></div></td>
+<td><div class="para" id="DB6">Laps (ft. to start)</div></td>
+<td><div class="r_cd" id="r_lap"></div></td>
+<td><div class="w_cd" id="w_lap"></div></td>
+<td><div class="b_cd" id="b_lap"></div></td>
+<td><div class="para" id="DB11">Energy [Whr]</div></td>
+<td><div class="r_cd" id="r_energy"></div></td>
+<td><div class="w_cd" id="w_energy"></div></td>
+<td><div class="b_cd" id="b_energy"></div></td>
+</tr>
+<tr>
+<td><div class="para" id="DB2">Current [A]</div></td>
+<td><div class="r_cd" id="r_amp"></div></td>
+<td><div class="w_cd" id="w_amp"></div></td>
+<td><div class="b_cd" id="b_amp"></div></td>
+<td><div class="para" id="DB7">Distance [mi]</div></td>
+<td><div class="r_cd" id="r_dist"></div></td>
+<td><div class="w_cd" id="w_dist"></div></td>
+<td><div class="b_cd" id="b_dist"></div></td>
+<td><div class="para">Energy Rate [W/mi]</div></td>
+<td><div class="r_cd" id="r_eff"></div></td>
+<td><div class="w_cd" id="w_eff"></div></td>
+<td><div class="b_cd" id="b_eff"></div></td>
+</tr>
+<tr>
+<td><div class="para" id="DB3">Motor RPM</div></td>
+<td><div class="r_cd" id="r_rpm"></div></td>
+<td><div class="w_cd" id="w_rpm"></div></td>
+<td><div class="b_cd" id="b_rpm"></div></td>
+<td><div class="para" id="DB8">Driver 1 Time</div></td>
+<td><div class="r_cd" id="r_d0time"></div></td>
+<td><div class="w_cd" id="w_d0time"></div></td>
+<td><div class="b_cd" id="b_d0time"></div></td>
+<td><div class="para">Target Current [A]</div></td>
+<td><div class="r_cd" id="r_target"></div></td>
+<td><div class="w_cd" id="w_target"></div></td>
+<td><div class="b_cd" id="b_target"></div></td>
+</tr>
+<tr>
+<td><div class="para" id="DB4">Car Speed [MPH]</div></td>
+<td><div class="r_cd" id="r_spd"></div></td>
+<td><div class="w_cd" id="w_spd"></div></td>
+<td><div class="b_cd" id="b_spd"></div></td>
+<td><div class="para" id="DB9">Driver 2 Time</div></td>
+<td><div class="r_cd" id="r_d1time"></div></td>
+<td><div class="w_cd" id="w_d1time"></div></td>
+<td><div class="b_cd" id="b_d1time"></div></td>
+<td><div class="para">Energy Left [%]</div></td>
+<td><div class="r_cd" id="r_energyp"></div></td>
+<td><div class="w_cd" id="w_energyp"></div></td>
+<td><div class="b_cd" id="b_energyp"></div></td>
+</tr>
+<tr>
+<td><div class="para" id="DB5">Temp Mtr/Aux [&degF]</div></td>
+<td><div class="r_cd" id="r_tmp"></div></td>
+<td><div class="w_cd" id="w_tmp"></div></td>
+<td><div class="b_cd" id="b_tmp"></div></td>
+<td><div class="para" id="DB10">Driver 3 Time</div></td>
+<td><div class="r_cd" id="r_d2time"></div></td>
+<td><div class="w_cd" id="w_d2time"></div></td>
+<td><div class="b_cd" id="b_d2time"></div></td>
+<td><div class="para">Time Left [%]</div></td>
+<td><div class="r_cd" id="r_timep"></div></td>
+<td><div class="w_cd" id="w_timep"></div></td>
+<td><div class="b_cd" id="b_timep"></div></td>
+</tr>
+</table>
+<canvas class="gph" id="Graph" left="0" top="0" width="1880" height="740"></canvas>
+<canvas class="gph" id="Probe" left="0" top="0" width="1880" height="740"></canvas>
+<div>
+<input type="checkbox" class="cb_v" id="checkVolts" onclick="SetVoltState()" checked>
+<input type="checkbox" class="cb_la" id="checkLamp" onclick="SetLapAmpStrate()" checked>
+<input type="checkbox" class="cb_lnrg" id="checkLNRG" onclick="SetLNRGState()" checked>
+<input type="checkbox" class="cb_a" id="checkAmps" onclick="SetAmpsState()">
+<input type="checkbox" class="cb_t" id="checkTemp" onclick="SetTempState()">
+<input type="checkbox" class="cb_s" id="checkSpeed" onclick="SetSpeedState()">
+<input type="checkbox" class="cb_lt" id="checkLTime" onclick="SetLTimestate()">
+<input type="checkbox" class="cb_nrg" id="checkEnergy" onclick="SetEnergyState()">
+<input type="checkbox" class="cb_alt" id="checkAlt" onclick="SetAltState()">
+<input type="checkbox" class="cb_esc" id="checkESC" onclick="SetESCState()" disabled="true">
+<input type="checkbox" class="cb_pm" id="checkPM" onclick="SetPMState()" checked>
+<input type="checkbox" class="cb_tm" id="checkTM" onclick="SetTrendState()">
+<input type="checkbox" class="cb_rl" id="checkRL" onclick="SetRaceLineState()">
+<input type="radio" class="gf_n" id="optNG" name="GfOpt" onclick="SetGfSt()" value="0" checked="checked">
+<input type="radio" class="gf_x" id="optRG" name="GfOpt" onclick="SetGfSt()" value="1">
+<input type="radio" class="gf_y" id="optWG" name="GfOpt" onclick="SetGfSt()" value="2">
+<input type="radio" class="gf_z" id="optBG" name="GfOpt" onclick="SetGfSt()" value="3">
+<input type="radio" class="rb_a" id="optNF" name="DspOpt" onclick="SetOpSt()" value="0" checked="checked">
+<input type="radio" class="rb_r" id="optRF" name="DspOpt" onclick="SetOpSt()" value="1">
+<input type="radio" class="rb_w" id="optWF" name="DspOpt" onclick="SetOpSt()" value="2">
+<input type="radio" class="rb_b" id="optBF" name="DspOpt" onclick="SetOpSt()" value="3">
+<button class="fit"  onclick="FitMode()">Fit</button>
+</div>
+</main>
+</body>
+</html>
+<script>
+var xmlHttp=createXMLObject();
+var graph=document.getElementById("Graph");
+var B1=graph.getContext("2d");
+var TTCanvas=document.getElementById("Probe");
+var B2=TTCanvas.getContext("2d");
+var bt,i=0,j=0,px1=0,py1=0,px2=0,py2=0,temp=0,dy1=0,dy2=0,dx1=0,x2=0,Tempdx1;
+var h=180,l=25,w=1800,t=60,draw=true,ys=30,ltys=300,lys=0,yss=150;
+var lyss=0,yi=15,xs=90,xi=18,CarRaceTime=0,oCarRaceTime=0;
+var r_pvlt=0,w_pvlt=0,b_pvlt=0,r_pamp=0,w_pamp=0,b_pamp=0,r_dist=0,w_dist=0,b_dist=0,r_Laps=0,w_Laps=0,b_Laps=0,r_LapTime=0,w_LapTime=0,b_LapTime=0;
+var GfVal=0,OptVal=0,r_pGX=0,r_pGY=0,r_pGZ=0,w_pGX=0,w_pGY=0,w_pGZ=0,b_pGX=0,b_pGY=0,b_pGZ=0;
+var r_plamp=0,w_plamp=0,b_plamp=0,r_alt=0,w_alt=0,b_alt=0,r_erate=0,w_erate=0,b_erate=0;
+var MinMoved=false,MaxMoved=false,r_plnrg=0,w_plnrg=0,b_plnrg=0,r_hd=0,w_hd=0,b_hd=0;
+var r_PLD=false,w_PLD=false,b_PLD=false,r_driver=0,w_driver=0,b_driver=0,r_odriver=-1,w_odriver=-1,b_odriver=-1;r_DeviceID=0,w_DeviceID=0,b_DeviceID=0;
+var r_lat,r_lon,w_lat,w_lon,b_lat,b_lon;
+var nodelist,n,r_dn,w_dn,b_dn,Point=0,t_dx1=0,r_mtemp,w_mtemp,b_mtemp,r_xtemp,w_xtemp,b_xtemp,DrawC=false,DrSpPnt=false;
+var r_cspd,w_cspd,b_cspd,r_ocspd,w_ocspd,b_ocspd,r_nrg,w_nrg,b_nrg,r_ww,w_ww,b_ww;
+var chk,chkvlt,chklamp,chklnrg,chkamps,chktemp,chkspd,chklt,chknrg,chkalt,chkPM,chkTM,chkRL;
+var DtPnt,oDtPnt,AxisColor=0,r_dts=0,w_dts=0,b_dts=0;
+var C_AXISRED="#FF0000",C_AXISWHITE="#FFFFFF",C_AXISBLUE="#0000FF",C_NORM="#0064FA",C_GLINE="#222222",C_NOTH="#66ff99",C_DCNG="#1f7a1f",C_VLT="#00ffff";
+var G_AMP="#ffff33",C_LAMP="#ff66d9",C_TMP="#cc0000",C_TMPX="#ffa852",C_SPD="#00ff00",C_NRG="#DD00FF",C_LTIME="#8888ff",C_BE="#414141",C_BV="#414141";
+var C_LNRG="#FF9000",C_RATE="#AAAAAA",C_GS="#4d4dff",C_HSELECT="#00Abff",C_HCOLOR="#ff944d",TEXT_ACTIVE="#FFFFFF",TEXT_INACTIVE="#777777",TEXT_ERROR="#FF0000";
+var C_ESC="#A100FF", RED_TRACK="#C10000", WHITE_TRACK ="#C1C1C1",BLUE_TRACK="#0000C1";
+var TTTime=0,tw=0,Red,Green,Blue;
+var BColor=false,EColor=false;
+var LnThk=2;
+var r_Top=50,w_Top=270,b_Top=490,r_oLaps=0,w_oLaps=0,b_oLaps=0;
+let r_DN=new Array(3);
+let r_DCT=new Array(20);
+var r_cdn=-1;
+let w_DN=new Array(3);
+let w_DCT=new Array(20);
+var w_cdn=-1;
+let b_DN=new Array(3);
+let b_DCT=new Array(20);
+var b_cdn=-1,Cars=0,Points=0,Redraw=true,MinValue=0,MaxValue=5400,MinSel=false,MaxSel=false;
+var ZoomedIn=false,BTemp=0,ETemp=0;
+const optText=["Volts","L. Amp","L. NRG","Amps","T x10","Speed","L. Time","Energy","Alt.(x0.5)","TEST"];
+const optCol=[C_VLT,C_LAMP,C_LNRG,G_AMP,C_TMP,C_SPD,C_LTIME,C_NRG,C_RATE,C_ESC,];
+const optDot=[false,true,true,false,false,false,true,false,false,false];
+var temp=0;
+let r_Lamp=new Array(200);
+let r_LNRG=new Array(200);
+let r_LapX=new Array(200);
+var r_LapsDP=0;
+var r_pdchange=false;
+let w_Lamp=new Array(200);
+let w_LNRG=new Array(200);
+let w_LapX=new Array(200);
+var w_LapsDP=0;
+var w_pdchange=false;
+let b_Lamp=new Array(200);
+let b_LNRG=new Array(200);
+let b_LapX=new Array(200);
+let r_LTimes=new Array(200);
+let w_LTimes=new Array(200);
+let b_LTimes=new Array(200);
+var AR=0;
+var r_TPlat=new Array(600);
+var r_TPlon=new Array(600);
+var r_TPPnt=0;
+var w_TPlat=new Array(600);
+var w_TPlon=new Array(600);
+var w_TPPnt=0;
+var b_TPlat=new Array(600);
+var b_TPlon=new Array(600);
+var b_TPPnt=0;
+var shit = 0;
+var r_RPlat=new Array(600);
+var r_RPlon=new Array(600);
+var r_RPPoints=0;
+var r_left=999;
+var r_right=-999;
+var r_top=999;
+var r_bottom=-999;
+var r_StartPoint=0;
+var w_RPlat=new Array(600);
+var w_RPlon=new Array(600);
+var w_RPPoints=0;
+var w_left=999;
+var w_right=-999;
+var w_top=999;
+var w_bottom=-999;
+var w_StartPoint=0;
+var b_RPlat=new Array(600);
+var b_RPlon=new Array(600);
+var b_RPPoints=0;
+var b_left=999;
+var b_right=-999;
+var b_top=999;
+var b_bottom=-999;
+var b_StartPoint=0;
+var PlotColor=true;
+var LegendText;
+var b_LapsDP=0;
+var b_pdchange=false;
+let r_Volt=new Array(5401);
+let w_Volt=new Array(5401);
+let b_Volt=new Array(5401);
+let r_Amps=new Array(5401);
+let w_Amps=new Array(5401);
+let b_Amps=new Array(5401);
+let r_Tmp=new Array(5401);
+let w_Tmp=new Array(5401);
+let b_Tmp=new Array(5401);
+let r_TmpX=new Array(5401);
+let w_TmpX=new Array(5401);
+let b_TmpX=new Array(5401);
+let r_Spd=new Array(5401);
+let w_Spd=new Array(5401);
+let b_Spd=new Array(5401);
+let r_NRG=new Array(5401);
+let w_NRG=new Array(5401);
+let b_NRG=new Array(5401);
+let r_Alt=new Array(5401);
+let w_Alt=new Array(5401);
+let b_Alt=new Array(5401);
+let r_GX=new Array(5401);
+let r_GY=new Array(5401);
+let r_GZ=new Array(5401);
+let w_GX=new Array(5401);
+let w_GY=new Array(5401);
+let w_GZ=new Array(5401);
+let b_GX=new Array(5401);
+let b_GY=new Array(5401);
+let b_GZ=new Array(5401);
+var tdx1=0,tdx2=0;
+var tx=0,ty=0,cx=0,cy=0,dx=0,dy=0,r,tt=0,TTFound=false,suffix,dval,sf,HRng=8,TL=2,HL=3,VL=4,StPt=0,EndPoint=5400,XStPt=1;
+var BLEnergy=[0,10,18,28,36,44,51,59,66,74,81,88,96,103,110,117,124,131,138,145,152,159,166,173,180,187,194,201,208,215,222,229,236,243,250,257,264,270,277,284,291,298,305,311,318,
+325,332,338,345,352,358,365,372,378,385,391,398,404,411,417,424,430,437,443,450,456,462,469,475,481,488,494,500,506,512,519,525,531,537,543,549,555,561,566,572,578,584,589,595,600];
+var BLVolts=[24.28,24.26,24.24,24.22,24.2,24.18,24.16,24.14,24.12,24.11,24.09,24.07,24.05,24.03,24,23.98,23.96,23.94,23.92,23.9,23.88,23.86,
+23.83,23.81,23.79,23.77,23.74,23.72,23.7,23.68,23.65,23.63,23.6,23.58,23.55,23.53,23.5,23.48,23.45,23.43,23.4,23.37,23.35,23.32,23.29,
+23.26,23.23,23.2,23.18,23.15,23.11,23.08,23.05,23.02,22.99,22.96,22.92,22.89,22.85,22.82,22.78,22.75,22.71,22.67,22.63,22.59,22.55,22.51,
+22.46,22.42,22.37,22.33,22.28,22.23,22.18,22.12,22.07,22.01,21.95,21.89,21.82,21.75,21.68,21.6,21.51,21.42,21.33,21.22,21.09,21];
+
+var ActualBLEnergy=new Array(90);
+var BSel=false,ESel=false,SSel=false;
+var BLoc=false,ELoc=false,SLoc=false;
+var MinLoc=false,MaxLoc=false;
+var E_tef=[1,1,1,1];
+var EHandle=[-1,-1,-1,-1];
+var BHandle=[BLVolts[89],BLVolts[89],BLVolts[89],BLVolts[89]];
+var BScale=[0,0,0,0];
+var EScale=[0,0,0,0];
+var BStart=[BLVolts[89],BLVolts[89],BLVolts[89],BLVolts[89]];
+var EDataPoint=[BLEnergy[89],BLEnergy[89],BLEnergy[89],BLEnergy[89]];
+var BatteryShift=[0,0,0,0];
+var ScaleFactor=[60,60,60,60];
+var dp=0;
+
+function createXMLObject() {
+if (window.XMLHttpRequest) {
+xmlHttp=new XMLHttpRequest();
+}else{
+xmlHttp=new ActiveXObject('Microsoft.XMLHTTP');
+}
+return xmlHttp;
+}
+
+function response() {
+
+var msg,xmlRet,xmldoc,color,text_color,mnts,sec,rt,temp,JData;
+var dt=new Date();
+xmlRet=xmlHttp.responseXML;
+JData=JSON.parse(this.response);
+r_ww=JData.Warnings[0];
+w_ww=JData.Warnings[1];
+b_ww=JData.Warnings[2];
+CarRaceTime=JData.RaceTime;
+if (CarRaceTime>5400) {
+CarRaceTime=5400;
+}
+
+mnts=Math.floor(CarRaceTime/60);
+sec=CarRaceTime % 60;
+if (sec<10) {
+rt=mnts+":"+"0"+sec;
+}else{
+rt=mnts+":"+sec;
+}
+document.getElementById('car_race_time').innerHTML=rt;
+
+r_pvlt=JData.Volts[0];
+if (r_ww&128) {
+document.getElementById('r_vlt').innerHTML=r_pvlt+" GPS!";
+}else{
+document.getElementById('r_vlt').innerHTML=r_pvlt;
+}
+w_pvlt=JData.Volts[1];
+if (w_ww&128) {
+document.getElementById('w_vlt').innerHTML=w_pvlt+" GPS!";
+}else{
+document.getElementById('w_vlt').innerHTML=w_pvlt;
+}
+b_pvlt=JData.Volts[2];
+if (b_ww&128) {
+document.getElementById('b_vlt').innerHTML=b_pvlt+" GPS!";
+}else{
+document.getElementById('b_vlt').innerHTML=b_pvlt;
+}
+
+r_Laps=JData.Laps[0];
+w_Laps=JData.Laps[1];
+b_Laps=JData.Laps[2];
+r_dts=JData.DTS[0];
+w_dts=JData.DTS[1];
+b_dts=JData.DTS[2];
+r_plnrg=JData.LapEnergy[0];
+w_plnrg=JData.LapEnergy[1];
+b_plnrg=JData.LapEnergy[2];
+r_pamp=JData.Amps[0];
+if (r_ww&512) {
+document.getElementById('r_amp').innerHTML=r_pamp+" Key!";
+}else{
+document.getElementById('r_amp').innerHTML=r_pamp;
+}
+w_pamp=JData.Amps[1];
+if (w_ww&512) {
+document.getElementById('w_amp').innerHTML=w_pamp+" Key!";
+}else{
+document.getElementById('w_amp').innerHTML=w_pamp;
+}
+b_pamp=JData.Amps[2];
+if (b_ww&512) {
+document.getElementById('b_amp').innerHTML=b_pamp+" Key!";
+}else{
+document.getElementById('b_amp').innerHTML=b_pamp;
+}
+r_dist=JData.Distance[0];
+document.getElementById('r_dist').innerHTML=r_dist;
+w_dist=JData.Distance[1];
+document.getElementById('w_dist').innerHTML=w_dist;
+b_dist=JData.Distance[2];
+document.getElementById('b_dist').innerHTML=b_dist;
+document.getElementById('r_lap').innerHTML=r_Laps+" ("+(r_dts*3.28).toFixed(0)+")";
+document.getElementById('w_lap').innerHTML=w_Laps+" ("+(w_dts*3.28).toFixed(0)+")";
+document.getElementById('b_lap').innerHTML=b_Laps+" ("+(b_dts*3.28).toFixed(0)+")";
+msg=JData.TargetAmps[0];
+document.getElementById('r_target').innerHTML=msg;
+msg=JData.TargetAmps[1];
+document.getElementById('w_target').innerHTML=msg;
+msg=JData.TargetAmps[2];
+document.getElementById('b_target').innerHTML=msg;
+msg=JData.MotorRPM[0];
+document.getElementById('r_rpm').innerHTML=msg;
+msg=JData.MotorRPM[1];
+document.getElementById('w_rpm').innerHTML=msg;
+msg=JData.MotorRPM[2];
+document.getElementById('b_rpm').innerHTML=msg;
+r_nrg=JData.Energy[0];
+document.getElementById('r_energy').innerHTML=r_nrg;
+w_nrg=JData.Energy[1];
+document.getElementById('w_energy').innerHTML=w_nrg;
+b_nrg=JData.Energy[2];
+document.getElementById('b_energy').innerHTML=b_nrg;
+msg=JData.EnergyRem[0];
+if (msg>100) {
+msg=100;
+}
+if (msg<0) {
+msg=0;
+}
+color=C_NORM;
+document.getElementById('r_energyp').innerHTML=msg;
+document.getElementById('r_energyp').style.width=(msg+"%");
+document.getElementById('r_energyp').style.backgroundColor=color;
+document.getElementById('r_energyp').style.color=text_color;
+msg=JData.EnergyRem[1];
+text_color="#FFFFFF";
+if (msg>100) {
+msg=100;
+}
+if (msg<0) {
+msg=0;
+}
+color=C_NORM;
+document.getElementById('w_energyp').innerHTML=msg;
+document.getElementById('w_energyp').style.width=(msg+"%");
+document.getElementById('w_energyp').style.backgroundColor=color;
+document.getElementById('w_energyp').style.color=text_color;
+msg=JData.EnergyRem[2];
+text_color="#FFFFFF";
+if (msg>100) {
+msg=100;
+}
+if (msg<0) {
+msg=0;
+}
+color=C_NORM;
+document.getElementById('b_energyp').innerHTML=msg;
+document.getElementById('b_energyp').style.width=(msg+"%");
+document.getElementById('b_energyp').style.backgroundColor=color;
+document.getElementById('b_energyp').style.color=text_color;
+r_mtemp=JData.MotorTemp[0];
+w_mtemp=JData.MotorTemp[1];
+b_mtemp=JData.MotorTemp[2];
+r_xtemp=JData.AuxTemp[0];
+document.getElementById('r_tmp').innerHTML=r_mtemp+"/"+r_xtemp;
+if (r_ww&64) {
+document.getElementById('r_tmp').innerHTML=r_mtemp+"/"+r_xtemp+" G's!";
+}else{
+document.getElementById('r_tmp').innerHTML=r_mtemp+"/"+r_xtemp;
+}
+w_xtemp=JData.AuxTemp[1];
+document.getElementById('w_tmp').innerHTML=w_mtemp+"/"+w_xtemp;
+if (w_ww&64) {
+document.getElementById('w_tmp').innerHTML=w_mtemp+"/"+w_xtemp+" G's!";
+}else{
+document.getElementById('w_tmp').innerHTML=w_mtemp+"/"+w_xtemp;
+}
+b_xtemp=JData.AuxTemp[2];
+if (b_ww&64) {
+document.getElementById('b_tmp').innerHTML=b_mtemp+"/"+b_xtemp+" G's!";
+}else{
+document.getElementById('b_tmp').innerHTML=b_mtemp+"/"+b_xtemp;
+}
+r_cspd=JData.CarSpeed[0];
+if (r_ww&1024) {
+document.getElementById('r_spd').innerHTML=r_cspd+" Speed!";
+}else{
+document.getElementById('r_spd').innerHTML=r_cspd;
+}
+w_cspd=JData.CarSpeed[1];
+if (w_ww&1024) {
+document.getElementById('w_spd').innerHTML=w_cspd+" Speed!";
+}else{
+document.getElementById('w_spd').innerHTML=w_cspd;
+}
+b_cspd=JData.CarSpeed[2];
+if (b_ww&1024) {
+document.getElementById('b_spd').innerHTML=b_cspd+" Speed!";
+}else{
+document.getElementById('b_spd').innerHTML=b_cspd;
+}
+msg=JData.TimeRem[0];
+color=C_NORM;
+text_color="#FFFFFF";
+document.getElementById('r_timep').innerHTML=msg;
+document.getElementById('r_timep').style.width=(msg+"%");
+document.getElementById('r_timep').style.backgroundColor=color;
+document.getElementById('r_timep').style.color=text_color;
+msg=JData.TimeRem[1];
+color=C_NORM;
+text_color="#FFFFFF";
+document.getElementById('w_timep').innerHTML=msg;
+document.getElementById('w_timep').style.width=(msg+"%");
+document.getElementById('w_timep').style.backgroundColor=color;
+document.getElementById('w_timep').style.color=text_color;
+msg=JData.TimeRem[2];
+color=C_NORM;
+text_color="#FFFFFF";
+document.getElementById('b_timep').innerHTML=msg;
+document.getElementById('b_timep').style.width=(msg+"%");
+document.getElementById('b_timep').style.backgroundColor=color;
+document.getElementById('b_timep').style.color=text_color;
+msg=JData.Driver0Time[0];
+document.getElementById('r_d0time').innerHTML=msg;
+msg=JData.Driver0Time[1];
+document.getElementById('w_d0time').innerHTML=msg;
+msg=JData.Driver0Time[2];
+document.getElementById('b_d0time').innerHTML=msg;
+msg=JData.Driver1Time[0];
+document.getElementById('r_d1time').innerHTML=msg;
+msg=JData.Driver1Time[1];
+document.getElementById('w_d1time').innerHTML=msg;
+msg=JData.Driver1Time[2];
+document.getElementById('b_d1time').innerHTML=msg;
+msg=JData.Driver2Time[0];
+document.getElementById('r_d2time').innerHTML=msg;
+msg=JData.Driver2Time[1];
+document.getElementById('w_d2time').innerHTML=msg;
+msg=JData.Driver2Time[2];
+document.getElementById('b_d2time').innerHTML=msg;
+if (r_dist>0) {
+r_erate=r_nrg/r_dist;
+document.getElementById('r_eff').innerHTML=r_erate.toFixed(0);
+}else{
+r_erate=0;
+document.getElementById('r_eff').innerHTML="0";
+}
+if (w_dist>0) {
+w_erate=w_nrg/w_dist;
+document.getElementById('w_eff').innerHTML=w_erate.toFixed(0);
+}else{
+w_erate=0;
+document.getElementById('w_eff').innerHTML="0";
+}
+if (b_dist>0) {
+b_erate=b_nrg/b_dist;
+document.getElementById('b_eff').innerHTML=b_erate.toFixed(0);
+}else{
+b_erate=0;
+document.getElementById('b_eff').innerHTML="0";
+}
+r_alt=JData.Altitude[0]/50;
+w_alt=JData.Altitude[1]/50;
+b_alt=JData.Altitude[2]/50;
+r_pGX=JData.GFX[0]/100;
+r_pGX=(r_pGX*10)+10;
+r_pGY=JData.GFY[0]/100;
+r_pGY=(r_pGY*10)+10;
+r_pGZ=JData.GFZ[0]/100;
+r_pGZ=(r_pGZ*10)+10;
+w_pGX=JData.GFX[1]/100;
+w_pGX=(w_pGX*10)+10;
+w_pGY=JData.GFY[1]/100;
+w_pGY=(w_pGY*10)+10;
+w_pGZ=JData.GFZ[1]/100;
+w_pGZ=(w_pGZ*10)+10;
+b_pGX=JData.GFX[2]/100;
+b_pGX=(b_pGX*10)+10;
+b_pGY=JData.GFY[2]/100;
+b_pGY=(b_pGY*10)+10;
+b_pGZ=JData.GFZ[2]/100;
+b_pGZ=(b_pGZ*10)+10;
+r_plamp=JData.LapAmps[0];
+w_plamp=JData.LapAmps[1];
+b_plamp=JData.LapAmps[2];
+r_driver=JData.DriverNumber[0];
+w_driver=JData.DriverNumber[1];
+b_driver=JData.DriverNumber[2];
+r_dn=JData.DriverName[0];
+w_dn=JData.DriverName[1];
+b_dn=JData.DriverName[2];
+r_hd=JData.HaveData[0];
+w_hd=JData.HaveData[1];
+b_hd=JData.HaveData[2];
+r_LapTime=JData.LapTime[0];
+w_LapTime=JData.LapTime[1];
+b_LapTime=JData.LapTime[2];
+E_tef[1]=JData.TotalEnergy[0];
+if (E_tef[1]<500) {
+E_tef[1]=500;
+}
+if (E_tef[1]>750) {
+E_tef[1]=750;
+}
+E_tef[1]=E_tef[1]/600;
+E_tef[2]=JData.TotalEnergy[1];
+if (E_tef[2]<500) {
+E_tef[2]=500;
+}
+if (E_tef[2]>750) {
+E_tef[2]=750;
+}
+E_tef[2]=E_tef[2]/600;
+E_tef[3]=JData.TotalEnergy[2];
+if (E_tef[3]<500) {
+E_tef[3]=500;
+}
+if (E_tef[3]>750) {
+E_tef[3]=750;
+}
+E_tef[3]=E_tef[3]/600;
+r_DeviceID=JData.DeviceID[0];
+w_DeviceID=JData.DeviceID[1];
+b_DeviceID=JData.DeviceID[2];
+
+r_lat=JData.Lat[0];
+w_lat=JData.Lat[1];
+b_lat=JData.Lat[2];
+
+r_lon=JData.Lon[0];
+w_lon=JData.Lon[1];
+b_lon=JData.Lon[2];
+
+document.getElementById('r_did').innerHTML=r_DeviceID;
+document.getElementById('w_did').innerHTML=w_DeviceID;
+document.getElementById('b_did').innerHTML=b_DeviceID;
+
+if (r_pvlt == 0.1){
+// ping mode
+document.getElementById('r_vlt').innerHTML= "PING";
+document.getElementById('r_amp').innerHTML= r_DeviceID;
+document.getElementById('r_rpm').innerHTML= r_LapTime;
+}
+
+
+nodelist=document.getElementsByClassName("r_cd");
+
+  for (n=0;n<nodelist.length;n++) {
+    if (r_hd==1) {
+      nodelist[n].style.color=TEXT_ACTIVE;
+    }else{
+      nodelist[n].style.color=TEXT_INACTIVE;
+    }
+  }
+nodelist=document.getElementsByClassName("w_cd");
+  for (n=0;n<nodelist.length;n++) {
+    if (w_hd==1) {
+      nodelist[n].style.color=TEXT_ACTIVE;
+    }else{
+      nodelist[n].style.color=TEXT_INACTIVE;
+    }
+  }
+nodelist=document.getElementsByClassName("b_cd");
+for (n=0;n<nodelist.length;n++) {
+if (b_hd==1) {
+nodelist[n].style.color=TEXT_ACTIVE;
+}else{
+nodelist[n].style.color=TEXT_INACTIVE;
+}
+}
+dx1=oCarRaceTime;
+dx2=CarRaceTime;
+
+
+
+if ((Math.abs(dx2)<=5400)&&(Math.abs(CarRaceTime)>0)&&(CarRaceTime !=oCarRaceTime)) {
+
+oCarRaceTime=CarRaceTime;
+Point=CarRaceTime;
+CacheData();
+
+if (chkRL) {
+if ((r_RPPoints==1) && (r_Laps>0)){
+  B1.clearRect(80,40,590,660);
+  B2.clearRect(80,40,590,660);
+  PlotTrack(r_Laps, 80,r_TPPnt,r_TPlat,r_TPlon,0);
+}
+
+if ((w_RPPoints==1) && (w_Laps>0)){
+  B1.clearRect(690,60,590,660);
+  B2.clearRect(690,60,590,660);
+  PlotTrack(w_Laps, 690,w_TPPnt,w_TPlat,w_TPlon,1);
+}
+
+if ((b_RPPoints==1) && (b_Laps>0)){
+  B1.clearRect(1300,60,590,660);
+  B2.clearRect(1300,60,590,660);
+  PlotTrack(b_Laps, 1300,b_TPPnt,b_TPlat,b_TPlon,2);
+}
+
+PlotColor=true;
+
+if (chkamps){
+PlotDriverPosition(r_Laps,   80, r_RPPoints-1,r_RPlat,r_RPlon,r_Amps,0);
+PlotDriverPosition(w_Laps,  690, w_RPPoints-1,w_RPlat,w_RPlon,w_Amps,1);
+PlotDriverPosition(b_Laps, 1300, b_RPPoints-1,b_RPlat,b_RPlon,b_Amps,2);
+}
+else if (chkspd){
+PlotDriverPosition(r_Laps,   80, r_RPPoints-1,r_RPlat,r_RPlon,r_Spd,0);
+PlotDriverPosition(w_Laps,  690, w_RPPoints-1,w_RPlat,w_RPlon,w_Spd,1);
+PlotDriverPosition(b_Laps, 1300, b_RPPoints-1,b_RPlat,b_RPlon,b_Spd,2);
+}
+else {
+PlotColor=false;
+PlotDriverPosition(r_Laps,   80, r_RPPoints-1,r_RPlat,r_RPlon,r_Spd,0);
+PlotDriverPosition(w_Laps,  690, w_RPPoints-1,w_RPlat,w_RPlon,w_Spd,1);
+PlotDriverPosition(b_Laps, 1300, b_RPPoints-1,b_RPlat,b_RPlon,b_Spd,2);
+}
+}
+
+else {
+if (!ZoomedIn) {
+LnThk=HL;
+if (OptVal==1) {
+h=630;
+t=r_Top;
+DrawDtPnts(r_hd,r_Volt,r_PLD,r_LapsDP,r_LapX,r_Lamp,r_LNRG,r_LTimes,r_Amps,r_Tmp,r_TmpX,r_Alt,r_Spd,r_NRG,r_GX,r_GY,r_GZ,r_pdchange,r_DN[r_cdn]);
+} else if (OptVal==2) {
+h=630;
+t=r_Top;
+DrawDtPnts(w_hd,w_Volt,w_PLD,w_LapsDP,w_LapX,w_Lamp,w_LNRG,w_LTimes,w_Amps,w_Tmp,w_TmpX,w_Alt,w_Spd,w_NRG,w_GX,w_GY,w_GZ,w_pdchange,w_DN[w_cdn]);
+} else if (OptVal==3) {
+h=630;
+t=r_Top;
+DrawDtPnts(b_hd,b_Volt,b_PLD,b_LapsDP,b_LapX,b_Lamp,b_LNRG,b_LTimes,b_Amps,b_Tmp,b_TmpX,b_Alt,b_Spd,b_NRG,b_GX,b_GY,b_GZ,b_pdchange,b_DN[b_cdn]);
+}else{
+h=190;
+t=r_Top;
+LnThk=TL;
+DrawDtPnts(r_hd,r_Volt,r_PLD,r_LapsDP,r_LapX,r_Lamp,r_LNRG,r_LTimes,r_Amps,r_Tmp,r_TmpX,r_Alt,r_Spd,r_NRG,r_GX,r_GY,r_GZ,r_pdchange,r_DN[r_cdn]);
+t=w_Top;
+DrawDtPnts(w_hd,w_Volt,w_PLD,w_LapsDP,w_LapX,w_Lamp,w_LNRG,w_LTimes,w_Amps,w_Tmp,w_TmpX,w_Alt,w_Spd,w_NRG,w_GX,w_GY,w_GZ,w_pdchange,w_DN[w_cdn]);
+t=b_Top;
+DrawDtPnts(b_hd,b_Volt,b_PLD,b_LapsDP,b_LapX,b_Lamp,b_LNRG,b_LTimes,b_Amps,b_Tmp,b_TmpX,b_Alt,b_Spd,b_NRG,b_GX,b_GY,b_GZ,b_pdchange,b_DN[b_cdn]);
+}
+} 
+else {
+RedrawRegion();  
+}
+}
+}
+}
+
+
+
+
+function CacheData() {
+r_RPlat[r_RPPoints]=0;
+r_RPlon[r_RPPoints]=0;
+w_RPlat[w_RPPoints]=0;
+w_RPlon[w_RPPoints]=0;
+b_RPlat[b_RPPoints]=0;
+b_RPlon[b_RPPoints]=0;
+
+if (r_Laps == 0){
+r_TPlon[r_TPPnt]=r_lon;
+r_TPlat[r_TPPnt]=r_lat;
+}
+
+if (w_Laps == 0){
+w_TPlon[w_TPPnt]=w_lon;
+w_TPlat[w_TPPnt]=w_lat;
+}
+
+if (b_Laps == 0){
+b_TPlon[b_TPPnt]=b_lon;
+b_TPlat[b_TPPnt]=b_lat;
+}
+
+if (r_hd==1) {
+if (r_ww&512) {
+r_Volt[Point]=-1.0*r_pvlt;
+}
+else{
+r_Volt[Point]=1.0*r_pvlt;
+}
+r_PLD=false;
+if (Math.abs(r_Laps)>Math.abs(r_oLaps)) {
+r_oLaps=r_Laps;
+r_PLD=true;
+r_LapsDP++;
+r_Lamp[r_LapsDP]=r_plamp;
+r_LNRG[r_LapsDP]=r_plnrg;
+r_LTimes[r_LapsDP]=r_LapTime/25.0;
+r_LapX[r_LapsDP]=dx2;
+r_RPPoints=0;
+r_StartPoint=Point;
+}
+
+if (r_Laps==0) {
+r_TPlat[r_TPPnt]=r_lat;
+if (r_lat != 0){
+
+if (r_lat < r_top){
+  r_top=r_lat;
+}
+if (r_lat>r_bottom){
+  r_bottom=r_lat;
+}
+}
+r_TPlon[r_TPPnt]=r_lon;
+if (r_lon != 0){   
+if (r_lon < r_left){
+  r_left=r_lon;
+}
+if (r_lon>r_right){
+  r_right=r_lon;
+}
+}
+
+}
+else {
+if (r_lat != 0){
+if (r_lat < r_top){
+  r_lat=r_top;
+}
+if (r_lat > r_bottom){
+  r_lat=r_bottom;
+}
+}
+r_RPlat[r_RPPoints]=r_lat;
+if (r_lon!= 0){
+if (r_lon < r_left){
+  r_lon=r_left;
+}
+if (r_lon > r_right){
+  r_lon=r_right;
+}
+}
+r_RPlon[r_RPPoints]=r_lon;
+
+}
+r_Amps[Point]=r_pamp;
+r_Tmp[Point]=r_mtemp/10;
+r_TmpX[Point]=r_xtemp/10;
+r_Spd[Point]=r_cspd;
+r_NRG[Point]=r_nrg/25.0;
+r_Alt[Point]=r_alt;
+r_GX[Point]=r_pGX;
+r_GY[Point]=r_pGY;
+r_GZ[Point]=r_pGZ;
+r_pdchange=false;
+if (Math.abs(r_driver) !=Math.abs(r_odriver)) {
+r_pdchange=true;
+r_odriver=r_driver;
+r_cdn++;
+DName="";
+if (r_cdn>20) {
+r_cdn=20;
+}
+if (r_cdn<3) {
+r_DN[r_cdn]=r_dn;
+DName=r_dn;
+}
+r_DCT[r_cdn]=dx2;
+}
+}
+if (r_Laps == 0){
+r_TPPnt++;
+}
+else {
+r_RPPoints++;
+}
+
+if (w_hd==1) {
+if (w_ww&512) {
+w_Volt[Point]=-1.0*w_pvlt;
+}else{
+w_Volt[Point]=w_pvlt;
+}
+w_PLD=false;
+if (Math.abs(w_Laps)>Math.abs(w_oLaps)) {
+w_oLaps=w_Laps;
+w_PLD=true;
+w_LapsDP++;
+w_Lamp[w_LapsDP]=w_plamp;
+w_LNRG[w_LapsDP]=w_plnrg;
+w_LTimes[w_LapsDP]=w_LapTime/25.0;
+w_LapX[w_LapsDP]=dx2;
+w_RPPoints=0;
+w_StartPoint=Point;
+}
+
+if (w_Laps==0) {
+w_TPlat[w_TPPnt]=w_lat;
+if (w_lat != 0){
+if (w_lat < w_top){
+w_top=w_lat;
+}
+if (w_lat>w_bottom){
+w_bottom=w_lat;
+}
+}
+w_TPlon[w_TPPnt]=w_lon;
+if (w_lon != 0){   
+if (w_lon < w_left){
+w_left=w_lon;
+}
+if (w_lon>w_right){
+w_right=w_lon;
+}
+}
+}
+else {
+if (w_lat != 0){
+if (w_lat < w_top){
+w_lat=w_top;
+}
+if (w_lat > w_bottom){
+w_lat=w_bottom;
+}
+}
+w_RPlat[w_RPPoints]=w_lat;
+if (w_lon!= 0){
+if (w_lon < w_left){
+w_lon=w_left;
+}
+if (w_lon > w_right){
+w_lon=w_right;
+}
+}
+w_RPlon[w_RPPoints]=w_lon;
+}
+
+w_Amps[Point]=w_pamp;
+w_Tmp[Point]=w_mtemp/10;
+w_TmpX[Point]=w_xtemp/10;
+w_Spd[Point]=w_cspd;
+w_NRG[Point]=w_nrg/25.0;
+w_Alt[Point]=w_alt;
+w_GX[Point]=w_pGX;
+w_GY[Point]=w_pGY;
+w_GZ[Point]=w_pGZ;
+w_pdchange=false;
+if (Math.abs(w_driver) !=Math.abs(w_odriver)) {
+w_pdchange=true;
+w_odriver=w_driver;
+w_cdn++;
+DName="";
+if (w_cdn>20) {
+w_cdn=20;
+}
+if (w_cdn<3) {
+w_DN[w_cdn]=w_dn;
+DName=w_dn;
+}
+w_DCT[w_cdn]=dx2;
+}
+}
+if (w_Laps == 0){
+w_TPPnt++;
+}
+else {
+w_RPPoints++;
+}
+///////////////////////////////////////////////////////////////////
+if (b_hd==1) {
+  if (b_ww&512) {
+    b_Volt[Point]=-1.0*b_pvlt;
+  }else{
+    b_Volt[Point]=b_pvlt;
+  }
+  b_PLD=false;
+  if (Math.abs(b_Laps)>Math.abs(b_oLaps)) {
+    b_oLaps=b_Laps;
+    b_PLD=true;
+    b_LapsDP++;
+    b_Lamp[b_LapsDP]=b_plamp;
+    b_LNRG[b_LapsDP]=b_plnrg;
+    b_LTimes[b_LapsDP]=b_LapTime/25.0;
+    b_LapX[b_LapsDP]=dx2;
+    b_RPPoints=0;
+    b_StartPoint=Point;
+  }
+
+  if (b_Laps==0) {
+    b_TPlat[b_TPPnt]=b_lat;
+    if (b_lat != 0){
+      if (b_lat < b_top){
+        b_top=b_lat;
+      }
+      if (b_lat>b_bottom){
+        b_bottom=b_lat;
+      }
+    }
+    b_TPlon[b_TPPnt]=b_lon;
+    if (b_lon != 0){   
+      if (b_lon < b_left){
+        b_left=b_lon;
+      }
+      if (b_lon>b_right){
+        b_right=b_lon;
+      }
+    }
+  }
+else {
+  if (b_lat != 0){
+    if (b_lat < b_top){
+      b_lat=b_top;
+    }
+    if (b_lat > b_bottom){
+      b_lat=b_bottom;
+    }
+  }
+  b_RPlat[b_RPPoints]=b_lat;
+  if (b_lon!= 0){
+    if (b_lon < b_left){
+      b_lon=b_left;
+    }
+    if (b_lon > b_right){
+      b_lon=b_right;
+    }
+  }
+  b_RPlon[b_RPPoints]=b_lon;
+}
+
+b_Amps[Point]=b_pamp;
+b_Tmp[Point]=b_mtemp/10;
+b_TmpX[Point]=b_xtemp/10;
+b_Spd[Point]=b_cspd;
+b_NRG[Point]=b_nrg/25.0;
+b_Alt[Point]=b_alt;
+b_GX[Point]=b_pGX;
+b_GY[Point]=b_pGY;
+b_GZ[Point]=b_pGZ;
+b_pdchange=false;
+if (Math.abs(b_driver) !=Math.abs(b_odriver)) {
+  b_pdchange=true;
+  b_odriver=b_driver;
+  b_cdn++;
+  DName="";
+  if (b_cdn>20) {
+    b_cdn=20;
+  }
+  if (b_cdn<3) {
+    b_DN[b_cdn]=b_dn;
+    DName=b_dn;
+  }
+  b_DCT[b_cdn]=dx2;
+  }
+}
+
+if (b_Laps == 0){
+b_TPPnt++;
+}
+else {
+b_RPPoints++;
+}
+
+}
+
+function DrawDtPnts(Have,VoltAry,PlotLapData,LapDP,LapXAry,LapAmpAry,LapNRGAry,LapTimeAry,AmpArray,MTempAry,XTempAry,RateAry,SpeedAry,NRGAry,GFXAry,GFYAry,GFZAry,DriverChange,DriverName) {
+if ((Point==0)||(Have==0)) {
+return;
+}
+if (chkvlt) {
+oDtPnt=VoltAry[Point-1];
+DtPnt=VoltAry[Point];
+DrSpPnt=false;
+if (VoltAry[Point]<0.0) {
+DrSpPnt=true;
+}
+oDtPnt=Math.abs(oDtPnt);
+DtPnt=Math.abs(DtPnt);
+PlotData(LnThk,C_VLT);
+}
+if (chkamps) {
+oDtPnt=AmpArray[Point-1];
+DtPnt=AmpArray[Point];
+PlotData(LnThk,G_AMP);
+}
+if (chktemp) {
+oDtPnt=MTempAry[Point-1];
+DtPnt=MTempAry[Point];
+PlotData(LnThk,C_TMP);
+}
+if (chktemp) {
+DtPnt=XTempAry[Point-1];
+oDtPnt=XTempAry[Point];
+PlotData(LnThk,C_TMPX);
+}
+if (chkalt) {
+oDtPnt=RateAry[Point-1];
+DtPnt=RateAry[Point];
+PlotData(LnThk,C_RATE);
+}
+if (chkspd) {
+oDtPnt=SpeedAry[Point-1];
+DtPnt=SpeedAry[Point];
+PlotData(LnThk,C_SPD);
+}
+if (chknrg) {
+oDtPnt=NRGAry[Point-1];
+DtPnt=NRGAry[Point];
+PlotData(LnThk,C_NRG);
+}
+if (GfVal==1) {
+oDtPnt=GFXAry[Point-1];
+DtPnt=GFXAry[Point];
+PlotData(LnThk,C_GS);
+} else if (GfVal==2) {
+oDtPnt=GFYAry[Point-1];
+DtPnt=GFYAry[Point];
+PlotData(LnThk,C_GS);
+} else if (GfVal==3) {
+oDtPnt=GFZAry[Point-1];
+DtPnt=GFZAry[Point];
+PlotData(LnThk,C_GS);
+}
+if (DriverChange) {
+DName=DriverName;
+DrawDriverLine();
+}
+if (PlotLapData) {
+if (chklamp) {
+dx1=LapXAry[LapDP-1];
+dx2=LapXAry[LapDP];
+if (LapDP==0) {
+dx2=dx1;
+}
+oDtPnt=LapAmpAry[LapDP-1];
+DtPnt=LapAmpAry[LapDP];
+DrawC=true;
+PlotData(LnThk,C_LAMP);
+}
+if (chklnrg) {
+if (LapDP>0) {
+dx1=LapXAry[LapDP-1];
+dx2=LapXAry[LapDP];
+oDtPnt=LapNRGAry[LapDP-1];
+DtPnt=LapNRGAry[LapDP];
+DrawC=true;
+PlotData(LnThk,C_LNRG);
+}
+}
+if (chklt) {
+dx1=LapXAry[LapDP-1];
+dx2=LapXAry[LapDP];
+oDtPnt=LapTimeAry[LapDP-1];
+DtPnt=LapTimeAry[LapDP];
+DrawC=true;
+PlotData(LnThk,C_LTIME);
+}
+}
+}
+
+function ResetScaling(){
+if (OptVal==0){
+StPt=0;
+EndPoint=5400;
+ZoomedIn=false;
+}
+else {
+if ((MinValue>0)||(MaxValue<5400)){
+StPt=MinValue;
+EndPoint=MaxValue;	
+ZoomedIn=true;
+}
+else {
+StPt=0;
+EndPoint=5400;
+ZoomedIn=false;
+}
+}
+ScaleFactor[OptVal]=(EndPoint-StPt)/90;
+}
+
+function DrawEnergyBL(Scale) {
+if ((!ZoomedIn)||(OptVal==0)){
+dx1=.1;
+dx2=0;
+oDtPnt=(BLEnergy[0]*Scale)/25.0;
+for (i=1;i<90;i++) {
+dx2=i*1.011*60;
+DtPnt=(BLEnergy[i]*Scale)/25.0;
+PlotData(LnThk*.8,C_BE);
+dx1=dx2;
+oDtPnt=DtPnt;
+}
+}
+}
+function DrawVoltsBL() {
+if ((!ZoomedIn)||(OptVal==0)){
+dx1=.1;
+dx2=0;
+oDtPnt=(BLVolts[0]);
+for (i=1;i<90;i++) {
+dx2=i*1.011*60;
+DtPnt=(BLVolts[i]);
+PlotData(LnThk*.8,C_BV);
+dx1=dx2;
+oDtPnt=DtPnt;
+}
+}
+}
+
+function DrawDriverLine() {
+if (!ZoomedIn) {
+px2=(dx2/3)+l;
+if (dx2>1) {
+B1.beginPath();
+B1.lineWidth=2;
+B1.strokeStyle=C_DCNG;
+B1.moveTo(px2,t);
+B1.lineTo(px2,h+t);
+B1.stroke();
+}
+B1.textAlign="start";
+B1.font="18px Arial";
+B1.fillStyle="#FFFFFF";
+B1.fillText(DName,px2+10,h+t-10);
+}
+}
+
+function SetVoltState() {
+chk=document.getElementById('checkVolts');
+chkvlt=chk.checked;
+if (!chkvlt) {
+ClearB1();
+h=190;
+}
+PaintGraphs();
+DrawTrends();
+}
+
+function SetLapAmpStrate() {
+chk=document.getElementById('checkLamp');
+chklamp=chk.checked;
+if (!chklamp) {
+ClearB1();
+h=190;
+}
+PaintGraphs();
+}
+
+function SetLNRGState() {
+chk=document.getElementById('checkLNRG');
+chklnrg=chk.checked;
+if (!chklnrg) {
+ClearB1();
+h=190;
+}
+PaintGraphs();
+}
+
+function SetAmpsState() {
+
+chk=document.getElementById('checkAmps');
+chkamps=chk.checked;
+
+if (chkRL){
+RedrawDriverLocations();
+return;
+}
+
+if (!chkamps) {
+ClearB1();
+h=190;
+}
+PaintGraphs();
+
+}
+
+function SetTempState() {
+chk=document.getElementById('checkTemp');
+chktemp=chk.checked;
+if (!chktemp) {
+ClearB1();
+h=190;
+}
+PaintGraphs();
+}
+
+function SetSpeedState() {
+chk=document.getElementById('checkSpeed');
+chkspd=chk.checked;
+if (chkRL){
+
+if (chkRL){
+RedrawDriverLocations();
+return;
+}
+}
+if (!chkspd) {
+ClearB1();
+h=190;
+}
+PaintGraphs();
+}
+
+function SetLTimestate() {
+chk=document.getElementById('checkLTime');
+chklt=chk.checked;
+if (!chklt) {
+ClearB1();
+h=190;
+}
+PaintGraphs();
+}
+
+function SetEnergyState() {
+chk=document.getElementById('checkEnergy');
+ClearB1();
+chknrg=chk.checked;
+PaintGraphs()
+DrawTrends();
+
+}
+
+function SetAltState() {
+chk=document.getElementById('checkAlt');
+ClearB1();
+chkalt=chk.checked;
+PaintGraphs()
+}
+
+function SetPMState() {
+chk=document.getElementById('checkPM');
+chkPM=chk.checked;
+}
+
+function SetTrendState() {
+chk=document.getElementById('checkTM');
+chkTM=chk.checked;
+ResetTrend();
+DrawTrends();
+SetControlStates();
+}
+
+function RedrawDriverLocations(){
+
+  ClearB1();
+  ClearB2();
+
+  PlotColor=true;
+
+  if (chkamps){
+    LegendText="Amps";
+    PlotTrack(r_Laps,  80,  r_TPPnt,r_TPlat,r_TPlon,0);
+    RedrawDriverPosition(r_Laps,   80, r_RPPoints-1,r_RPlat,r_RPlon,r_Amps,r_StartPoint,0);            
+    PlotTrack(w_Laps, 690,w_TPPnt,w_TPlat,w_TPlon,1);
+    RedrawDriverPosition(w_Laps,  690, w_RPPoints-1,w_RPlat,w_RPlon,w_Amps,w_StartPoint,1); 
+    PlotTrack(b_Laps, 1300,b_TPPnt,b_TPlat,b_TPlon,2);
+    RedrawDriverPosition(b_Laps, 1300, b_RPPoints-1,b_RPlat,b_RPlon,b_Amps,b_StartPoint,2); 
+  }
+  else if (chkspd){
+    LegendText="Speed";
+    PlotTrack(r_Laps,  80, r_TPPnt,r_TPlat,r_TPlon,0);
+    RedrawDriverPosition(r_Laps,   80, r_RPPoints-1,r_RPlat,r_RPlon,r_Spd,r_StartPoint,0);   
+    PlotTrack(w_Laps, 690,w_TPPnt,w_TPlat,w_TPlon,1);
+    RedrawDriverPosition(w_Laps,  690, w_RPPoints-1,w_RPlat,w_RPlon,w_Spd,w_StartPoint,1); 
+    PlotTrack(b_Laps, 1300,b_TPPnt,b_TPlat,b_TPlon,2);
+    RedrawDriverPosition(b_Laps, 1300, b_RPPoints-1,b_RPlat,b_RPlon,b_Spd,b_StartPoint,2); 
+  }
+  else{
+    LegendText="Location";
+    PlotColor=false;
+    PlotTrack(r_Laps,  80, r_TPPnt,r_TPlat,r_TPlon,0);
+    RedrawDriverPosition(r_Laps,   80, r_RPPoints-1,r_RPlat,r_RPlon,r_Spd,r_StartPoint,0);           
+    PlotTrack(w_Laps, 690,w_TPPnt,w_TPlat,w_TPlon,1);
+    RedrawDriverPosition(w_Laps,  690, w_RPPoints-1,w_RPlat,w_RPlon,w_Spd,w_StartPoint,1); 
+    PlotTrack(b_Laps, 1300,b_TPPnt,b_TPlat,b_TPlon,2);
+    RedrawDriverPosition(b_Laps, 1300, b_RPPoints-1,b_RPlat,b_RPlon,b_Spd,b_StartPoint,2); 
+  }	
+}
+
+function SetRaceLineState() {
+
+chk=document.getElementById('checkRL');
+chkRL=chk.checked;
+SetControlStates();
+
+if (chkRL){
+RedrawDriverLocations();
+}
+else {
+ClearB1();
+ClearB2();
+PaintGraphs();
+}
+}
+
+function ClearB1() {
+B1.clearRect(0,45,TTCanvas.width,TTCanvas.height);
+}
+
+function SetOpSt() {
+OptVal=0;
+chk=document.getElementsByName('DspOpt');
+for (var i=0,length=chk.length;i<length;i++) {
+if (chk[i].checked) {
+OptVal=chk[i].value;
+break;
+}
+}
+if (OptVal==0) {
+LnThk=TL;
+}else{
+LnThk=HL;
+}
+
+if (chkRL){
+ClearB1();
+ClearB2();
+}
+else {
+SetControlStates();
+PaintGraphs();
+ClearB2();
+BLoc=false;	
+ELoc=false;			
+SLoc=false;	
+ResetTrend();
+}
+}
+
+function FitMode(){
+MinValue=0;
+MaxValue=5400;
+DrawMinSlider();
+DrawMaxSlider();
+ClearB2();
+RedrawRegion();
+ResetTrend();
+}
+
+function SetGfSt() {
+GfVal=0;
+chk=document.getElementsByName('GfOpt');
+for (var i=0,length=chk.length;i<length;i++) {
+if (chk[i].checked) {
+GfVal=chk[i].value;
+break;
+}
+}
+if (GfVal==0) {
+LnThk=TL;
+}else{
+LnThk=HL;
+}
+PaintGraphs();
+}
+
+function SetControlStates(){
+
+if (chkRL){
+document.getElementById("checkVolts").disabled=true;
+document.getElementById("checkLamp").disabled=true;
+document.getElementById("checkTemp").disabled=true;
+document.getElementById("checkLNRG").disabled=true;
+document.getElementById("checkLTime").disabled=true;
+document.getElementById("checkAlt").disabled=true;
+document.getElementById("checkEnergy").disabled=true;
+document.getElementById("checkTM").disabled=true;
+document.getElementById("checkPM").disabled=true;
+document.getElementById("optNG").disabled=true;
+document.getElementById("optRG").disabled=true;
+document.getElementById("optWG").disabled=true;
+document.getElementById("optBG").disabled=true;
+document.getElementById("optNF").disabled=true;
+document.getElementById("optRF").disabled=true;
+document.getElementById("optWF").disabled=true;
+document.getElementById("optBF").disabled=true;
+return;
+}
+else {
+document.getElementById("checkVolts").disabled=false;
+document.getElementById("checkLamp").disabled=false;
+document.getElementById("checkTemp").disabled=false;
+document.getElementById("checkLNRG").disabled=false;
+document.getElementById("checkLTime").disabled=false;
+document.getElementById("checkAlt").disabled=false;
+document.getElementById("checkEnergy").disabled=false;
+document.getElementById("checkTM").disabled=false;
+document.getElementById("checkPM").disabled=false;
+document.getElementById("optNG").disabled=false;
+document.getElementById("optRG").disabled=false;
+document.getElementById("optWG").disabled=false;
+document.getElementById("optBG").disabled=false;
+document.getElementById("optNF").disabled=false;
+document.getElementById("optRF").disabled=false;
+document.getElementById("optWF").disabled=false;
+document.getElementById("optBF").disabled=false;
+}
+
+
+if (ZoomedIn) {
+document.getElementById("checkLamp").disabled=true;
+document.getElementById("checkLNRG").disabled=true;
+document.getElementById("checkLTime").disabled=true;
+document.getElementById("checkTM").disabled=true;
+}
+else {
+document.getElementById("checkLamp").disabled=false;
+document.getElementById("checkLNRG").disabled=false;
+document.getElementById("checkLTime").disabled=false;
+document.getElementById("checkTM").disabled=false;
+}
+if ((OptVal==0) || (ZoomedIn)){
+document.getElementById("checkTM").disabled=true;
+}
+else {
+document.getElementById("checkTM").disabled=false;
+}
+if ((OptVal==0) || (ZoomedIn)){
+document.getElementById("checkTM").disabled=true;
+}
+else {
+document.getElementById("checkTM").disabled=false;
+}
+if (chkTM){
+document.getElementById("checkPM").disabled=true;
+}
+else {
+document.getElementById("checkPM").disabled=false;
+}
+}
+
+function PaintGraphs() {
+ResetScaling();
+if (OptVal==0) {
+yi=15;
+h=190;
+LnThk=TL;
+ClearB1();
+t=r_Top;
+AxisColor=C_AXISRED;
+DrawGraph();
+t=w_Top;
+AxisColor=C_AXISWHITE;
+DrawGraph();
+t=b_Top;
+AxisColor=C_AXISBLUE;
+DrawGraph();
+DrawXAxis();
+if (chknrg) {
+t=r_Top;
+DrawEnergyBL(E_tef[1]);
+t=w_Top;
+DrawEnergyBL(E_tef[2]);
+t=b_Top;
+DrawEnergyBL(E_tef[3]);
+}
+if (chkvlt) {
+t=r_Top;
+DrawVoltsBL();
+t=w_Top;
+DrawVoltsBL();
+t=b_Top;
+DrawVoltsBL();
+}
+t=r_Top;
+RedrawDtPnts(r_DN,r_cdn,r_DCT,r_Volt,r_Lamp,r_LapsDP,r_LapX,r_LNRG,r_LTimes,r_Amps,r_Tmp,r_TmpX,r_Spd,r_NRG,r_Alt,r_GX,r_GY,r_GZ);
+t=w_Top;
+RedrawDtPnts(w_DN,w_cdn,w_DCT,w_Volt,w_Lamp,w_LapsDP,w_LapX,w_LNRG,w_LTimes,w_Amps,w_Tmp,w_TmpX,w_Spd,w_NRG,w_Alt,w_GX,w_GY,w_GZ);
+t=b_Top;
+RedrawDtPnts(b_DN,b_cdn,b_DCT,b_Volt,b_Lamp,b_LapsDP,b_LapX,b_LNRG,b_LTimes,b_Amps,b_Tmp,b_TmpX,b_Spd,b_NRG,b_Alt,b_GX,b_GY,b_GZ);
+}
+if (OptVal==1) {
+LnThk=HL;
+yi=30;
+ClearB1();
+t=r_Top;
+h=630;
+AxisColor=C_AXISRED;
+DrawGraph();
+DrawXAxis();
+if (chknrg) {
+DrawEnergyBL(E_tef[1]);
+}
+if (chkvlt) {
+DrawVoltsBL();
+}
+RedrawDtPnts(r_DN,r_cdn,r_DCT,r_Volt,r_Lamp,r_LapsDP,r_LapX,r_LNRG,r_LTimes,r_Amps,r_Tmp,r_TmpX,r_Spd,r_NRG,r_Alt,r_GX,r_GY,r_GZ);
+}
+if (OptVal==2) {
+LnThk=HL;
+yi=30;
+ClearB1();
+h=630;
+t=r_Top;
+AxisColor=C_AXISWHITE;
+DrawGraph();
+DrawXAxis();
+if (chknrg) {
+DrawEnergyBL(E_tef[2]);
+}
+if (chkvlt) {
+DrawVoltsBL();
+}
+RedrawDtPnts(w_DN,w_cdn,w_DCT,w_Volt,w_Lamp,w_LapsDP,w_LapX,w_LNRG,w_LTimes,w_Amps,w_Tmp,w_TmpX,w_Spd,w_NRG,w_Alt,w_GX,w_GY,w_GZ);
+}
+if (OptVal==3) {
+LnThk=HL;
+yi=30;
+ClearB1();
+h=630;
+t=r_Top;
+AxisColor=C_AXISBLUE;
+DrawGraph();
+DrawXAxis();
+if (chknrg) {
+DrawEnergyBL(E_tef[3]);
+}
+if (chkvlt) {
+DrawVoltsBL();
+}
+RedrawDtPnts(b_DN,b_cdn,b_DCT,b_Volt,b_Lamp,b_LapsDP,b_LapX,b_LNRG,b_LTimes,b_Amps,b_Tmp,b_TmpX,b_Spd,b_NRG,b_Alt,b_GX,b_GY,b_GZ);
+}
+}
+
+function RedrawDtPnts(DriverAry,DriverCount,DriverTime,VoltAry,LAmpAry,LapDP,LapXAry,LNRGAry,LTimeAry,AmpArray,TempMAry,TempXAry,SpeedAry,NRGAry,RateAry,GXAry,GYAry,GZAry) {
+for (i=0;i<=DriverCount;i++) {
+DName="";
+if (i<3) {
+DName=DriverAry[i];
+}
+if (!ZoomedIn) {
+dx2=DriverTime[i];
+}else{
+dx2=StPt/ScaleFactor[OptVal];
+}
+DrawDriverLine();
+}
+if (chkvlt) {
+dx2=0;
+dx1=.05;
+XStPt=1;
+for (i=StPt;i<EndPoint;i++) {
+dx1=(XStPt-1)/1;
+dx2=XStPt/1;
+XStPt++;
+DrSpPnt=false;
+oDtPnt=VoltAry[i-1];
+DtPnt=VoltAry[i];
+if (oDtPnt<0) {
+DrSpPnt=true;
+oDtPnt=oDtPnt*-1.0;
+}
+if (DtPnt<0) {
+DrSpPnt=true;
+DtPnt=DtPnt*-1.0;
+}
+PlotData(LnThk,C_VLT);
+}
+}
+if (chkamps) {
+dx2=0;
+dx1=.05;
+XStPt=1;
+for (i=StPt;i<EndPoint;i++) {
+dx1=(XStPt-1)/1;
+dx2=XStPt/1;
+XStPt++;
+oDtPnt=AmpArray[i-1];
+DtPnt=AmpArray[i];
+PlotData(LnThk,G_AMP);
+}
+}
+if (chktemp) {
+dx2=0;
+dx1=.05;
+XStPt=1;
+for (i=StPt;i<EndPoint;i++) {
+dx1=(XStPt-1)/1;
+dx2=XStPt/1;
+XStPt++;
+oDtPnt=TempMAry[i-1];
+DtPnt=TempMAry[i];
+PlotData(LnThk,C_TMP);
+}
+}
+if (chktemp) {
+dx2=0;
+dx1=.05;
+XStPt=1;
+for (i=StPt;i<EndPoint;i++) {
+dx1=(XStPt-1)/1;
+dx2=XStPt/1;
+XStPt++;
+oDtPnt=TempXAry[i-1];
+DtPnt=TempXAry[i];
+PlotData(LnThk,C_TMPX);
+}
+}
+if (chkspd) {
+dx2=0;
+dx1=.05;
+XStPt=1;
+for (i=StPt;i<EndPoint;i++) {
+dx1=(XStPt-1)/1;
+dx2=XStPt/1;
+XStPt++;
+oDtPnt=SpeedAry[i-1];
+DtPnt=SpeedAry[i];
+PlotData(LnThk,C_SPD);
+}
+}
+if (chkalt) {
+dx2=0;
+dx1=.05;
+XStPt=1;
+for (i=StPt;i<EndPoint;i++) {
+dx1=(XStPt-1)/1;
+dx2=XStPt/1;
+XStPt++;
+oDtPnt=RateAry[i-1];
+DtPnt=RateAry[i];
+PlotData(LnThk,C_RATE);
+}
+}
+if (GfVal==1) {
+dx2=0;
+dx1=.05;
+XStPt=1;
+for (i=StPt;i<EndPoint;i++) {
+dx1=(XStPt-1)/1;
+dx2=XStPt/1;
+XStPt++;
+oDtPnt=GXAry[i-1];
+DtPnt=GXAry[i];
+PlotData(LnThk,C_GS);
+}
+} else if (GfVal==2) {
+dx2=0;
+dx1=.05;
+XStPt=1;
+for (i=StPt;i<EndPoint;i++) {
+dx1=(XStPt-1)/1;
+dx2=XStPt/1;
+XStPt++;
+oDtPnt=GYAry[i-1];
+DtPnt=GYAry[i];
+PlotData(LnThk,C_GS);
+}
+} else if (GfVal==3) {
+dx2=0;
+dx1=.05;
+XStPt=1;
+for (i=StPt;i<EndPoint;i++) {
+dx1=(XStPt-1)/1;
+dx2=XStPt/1;
+XStPt++;
+oDtPnt=GZAry[i-1];
+DtPnt=GZAry[i];
+PlotData(LnThk,C_GS);
+}
+}
+if (chknrg) {
+dx2=0;
+dx1=.05;
+XStPt=1;
+for (i=StPt;i<EndPoint;i++) {
+dx1=(XStPt-1)/1;
+dx2=XStPt/1;
+XStPt++;
+oDtPnt=NRGAry[i-1];
+DtPnt=NRGAry[i];
+PlotData(LnThk,C_NRG);
+}
+}
+if (!ZoomedIn){
+if (chklamp) {
+dx2=0;
+dx1=.05;
+for (i=1;i<=LapDP;i++) {
+DrawC=true;
+dx1=LapXAry[i-1];
+dx2=LapXAry[i];
+oDtPnt=LAmpAry[i-1];
+DtPnt=LAmpAry[i];
+PlotData(LnThk,C_LAMP);
+}
+}
+if (chklnrg) {
+dx2=0;
+dx1=.05;
+for (i=1;i<=LapDP;i++) {
+DrawC=true;
+dx1=LapXAry[i-1];
+dx2=LapXAry[i];
+oDtPnt=LNRGAry[i-1];
+DtPnt=LNRGAry[i];
+PlotData(LnThk,C_LNRG);
+}
+}
+if (chklt) {
+for (i=1;i<=LapDP;i++) {
+dx1=LapXAry[i-1];
+dx2=LapXAry[i];
+oDtPnt=LTimeAry[i-1];
+DtPnt=LTimeAry[i];
+DrawC=true;
+PlotData(LnThk,C_LTIME);
+}
+}
+}
+}
+
+function PlotData(Thickness,Color) {
+B1.lineWidth=Thickness;
+B1.strokeStyle=Color;
+B1.fillStyle=Color;
+if (Number(DtPnt)>ys) {
+dy2=ys;
+} else if (Number(DtPnt)<lys) {
+dy2=lys;
+}else{
+dy2=DtPnt;
+}
+if (Number(oDtPnt)>ys) {
+dy1=ys;
+} else if (Number(oDtPnt)<lys) {
+dy1=lys;
+}else{
+dy1=oDtPnt;
+}
+tdx1=(((dx1)/ScaleFactor[OptVal])*60);
+tdx2=(((dx2)/ScaleFactor[OptVal])*60);
+px1=(tdx1/3)+l;
+py1=(dy1-lys)*(t-(h+t))/(ys-lys)+h+t;
+px2=(tdx2/3)+l;
+py2=(dy2-lys)*(t-(h+t))/(ys-lys)+h+t;
+if (dx1>0.01) {
+B1.beginPath();
+B1.moveTo(px1,py1);
+B1.lineTo(px2,py2);
+B1.stroke();
+}
+DtPnt=dy2;
+if (DrawC) {
+DrawC=false;
+B1.beginPath();
+B1.arc(px1,py1,Thickness*1.5,0,2*Math.PI,false);
+B1.arc(px2,py2,Thickness*1.5,0,2*Math.PI,false);
+B1.fill();
+}
+if (DrSpPnt) {
+DrSpPnt=false;
+B1.fillStyle=C_NOTH;
+py2=(0-lys)*(t-(h+t))/(ys-lys)+h+t;
+B1.beginPath();
+B1.arc(px2,py2,3,0,2*Math.PI,false);
+B1.fill();
+}
+}
+
+function process() {
+if (draw) {
+
+TTCanvas.addEventListener("mousemove",ProcessDrag);
+TTCanvas.addEventListener("click",ProcessClick);
+
+document.getElementById("checkTM").disabled=true;
+MinValue=0;
+MaxValue=5400;
+chk=document.getElementById('checkVolts');
+chkvlt=chk.checked;
+chk=document.getElementById('checkLamp');
+chklamp=chk.checked;
+chk=document.getElementById('checkLNRG');
+chklnrg=chk.checked;
+chk=document.getElementById('checkAmps');
+chkamps=chk.checked;
+chk=document.getElementById('checkTemp');
+chktemp=chk.checked;
+chk=document.getElementById('checkSpeed');
+chkspd=chk.checked;
+chk=document.getElementById('checkEnergy');
+chknrg=chk.checked;
+chk=document.getElementById('checkLTime');
+chklt=chk.checked;
+chk=document.getElementById('checkAlt');
+chkalt=chk.checked;
+chk=document.getElementById('checkPM');
+chkPM=chk.checked;
+OptVal=0;
+chk=document.getElementsByName('DspOpt');
+for (var i=0,length=chk.length;i<length;i++) {
+if (chk[i].checked) {
+OptVal=chk[i].value;
+break;
+}
+}
+draw=false;
+t=50;
+for (i=0;i<10;i++) {
+B1.font="18px Arial";
+B1.beginPath();
+B1.lineWidth=3;
+B1.strokeStyle=optCol[i];
+B1.moveTo(45+113*i,t-15);
+B1.lineTo(45+113*i+60,t-15);
+B1.stroke();
+B1.beginPath();
+B1.fillStyle="#FFFFFF";
+if (optDot[i]) {
+B1.arc(45+113*i+30,t-15,3*2,0,2*Math.PI,false);
+B1.fillStyle=optCol[i];
+B1.fill();
+}
+B1.fillStyle="#FFFFFF";
+B1.fillText(optText[i],45+113*i,t-25);
+}
+B1.fillText("Prb",1180,t-25);
+B1.fillText("Tnd",1250,t-25);
+B1.fillText("Line", 1330,t-25);
+B1.font="16px Arial";
+B1.beginPath();
+B1.lineWidth=4;
+B1.strokeStyle=C_GS;
+B1.moveTo(1485,10);
+B1.lineTo(1540,10);
+B1.stroke();
+B1.beginPath();
+B1.fillText("G's (x10+10)",1375,15);
+B1.beginPath();
+B1.fillText("All",1600,15);
+B1.beginPath();
+B1.fillStyle="#FF4000";
+B1.fillText("5",1650,15);
+B1.beginPath();
+B1.fillStyle="#FFFFFF";
+B1.fillText("15",1685,15);
+B1.beginPath();
+B1.fillStyle="#0064FF";
+B1.fillText("1",1735,15);
+SetYScale();
+h=190;
+t=r_Top;
+AxisColor=C_AXISRED;
+DrawGraph();
+t=w_Top;
+AxisColor=C_AXISWHITE;
+DrawGraph();
+t=b_Top;
+AxisColor=C_AXISBLUE;
+DrawGraph();
+DrawXAxis();
+if (chkvlt) {
+t=r_Top;
+DrawVoltsBL();
+t=w_Top;
+DrawVoltsBL();
+t=b_Top;
+DrawVoltsBL();
+}
+}
+if (xmlHttp.readyState==0||xmlHttp.readyState==4) {
+xmlHttp.open("PUT","xml",true);
+xmlHttp.onreadystatechange=response;
+xmlHttp.send(null);
+}
+setTimeout("process()",200);
+}
+
+function SetYScale() {
+if (OptVal>0) {
+yi=30;
+}else{
+yi=15;
+}
+ys=30;
+}
+
+function DrawGraph() {
+B1.font="12px Arial";
+temp=0;
+j=0;
+for (i=0;i<=w;i+=(w/xi)) {
+B1.beginPath();
+B1.lineWidth=1;
+B1.strokeStyle=C_GLINE;
+B1.moveTo(i+l,t);
+B1.lineTo(i+l,h+t);
+B1.stroke();
+temp=j*(xs/xi);
+j++;
+}
+j=0;
+temp=0;
+for (i=0;i<=h;i+=(h/yi)) {
+B1.beginPath();
+B1.lineWidth=1;
+B1.strokeStyle=C_GLINE;
+B1.moveTo(l,i+t);
+B1.lineTo(w+l,i+t);
+B1.stroke();
+B1.textAlign="right";
+B1.fillStyle="#FFFFFF";
+temp=lys+(j*((ys-lys)/yi));
+B1.fillText(temp,l-5,h-i+t+5);
+B1.textAlign="left";
+B1.fillStyle="#FFFFFF";
+B1.fillText(temp*25.0,w+30,h-i+t+5);
+j++;
+}
+B1.beginPath();
+B1.lineWidth=2;
+B1.strokeStyle=AxisColor;
+B1.moveTo(l,t);
+B1.lineTo(l,h+t);
+B1.stroke();
+B1.beginPath();
+B1.lineWidth=2;
+B1.strokeStyle=AxisColor;
+B1.moveTo(l,h+t);
+B1.lineTo(l+w,h+t);
+B1.stroke();
+B1.beginPath();
+B1.lineWidth=2;
+B1.strokeStyle=AxisColor;
+B1.moveTo(w+25,t);
+B1.lineTo(w+25,h+t);
+B1.stroke();
+}
+
+function DrawXAxis() {
+B1.font="16px Arial";
+j=0;
+temp=0;
+B1.textAlign="center";
+B1.beginPath();
+for (i=0;i<=w;i+=(w/xi)) {
+temp=j*(xs/xi);
+B1.fillStyle="#FFFFFF";
+B1.fillText(temp.toFixed(0),i+l,h+t+20);
+j++;
+}
+B1.fillStyle="#FFFFFF";
+B1.fillText("Race Time [min]",925,720);
+DrawMinSlider();
+DrawMaxSlider();
+}
+
+function RedrawRegion() {
+if (MaxValue<150) {
+MaxValue=150;
+document.getElementById('MaxScale').value=MaxValue;
+}
+if (MinValue>5250) {
+MinValue=5250;
+document.getElementById('MinScale').value=MinValue;
+}
+if ((MinValue>0)||(MaxValue<5400)) {
+ZoomedIn=true;
+}else{
+ZoomedIn=false;
+}
+SetControlStates();
+PaintGraphs();
+MinMoved=false;
+MaxMoved=false;
+}
+
+function DrawTrends(){
+ClearB2();
+if (chkTM){
+if (chknrg){
+DrawEHandle();
+ShowETrend();
+}
+if (chkvlt){
+DrawBHandle();	
+ShowBTrend();			
+}
+}
+
+}
+
+
+function ResetTrend(){
+
+for (i=0;i < 90;i++){
+ActualBLEnergy[i]=(BLEnergy[i] * E_tef[OptVal]); //+(EScale[OptVal]*(i/90));
+}
+ETemp=ActualBLEnergy[89];
+ETemp=map(ETemp,0,750,680,50);
+if (EHandle[OptVal]==-1){
+EHandle[OptVal]=ETemp;
+}
+BLoc=false;	
+ELoc=false;	
+SLoc=false;	
+DrawTrends();
+
+}
+
+function DrawMinSlider() {
+if ((OptVal==0) || (chkTM)  || (chkRL)) {
+return;
+}
+if (MinLoc){
+B2.fillStyle=C_HSELECT;
+B2.strokeStyle=C_HSELECT;
+}
+else {
+B2.fillStyle=C_HCOLOR;
+}
+
+
+if (MinValue+150>MaxValue) {
+MinValue=MaxValue-150;
+return;
+}
+if (MinValue<0) {
+MinValue=0;
+return;
+}
+
+B2.beginPath();
+B2.moveTo((MinValue/3)+l,t+h-HRng);
+B2.lineTo((MinValue/3)+l+((1.5*HRng)*2),t+h);
+B2.lineTo((MinValue/3)+l,t+h+HRng);
+B2.lineTo((MinValue/3)+l,t+h-HRng);
+B2.fill();
+if (MinSel){
+B2.fillStyle=C_HSELECT;
+B2.strokeStyle=C_HSELECT;
+B2.beginPath();
+B2.lineWidth=.5;
+B2.moveTo((MinValue/3)+l,50);
+B2.lineTo((MinValue/3)+l,t+h);
+B2.stroke();
+}
+}
+
+function DrawMaxSlider() {
+if ((OptVal==0) || (chkTM)  || (chkRL)) {
+return;
+}
+if (MaxLoc){
+B2.fillStyle=C_HSELECT;
+B2.strokeStyle=C_HSELECT;
+}
+else {
+B2.fillStyle=C_HCOLOR;
+}
+
+if (MaxValue<MinValue+150) {
+MaxValue=MinValue+150;
+return;
+}
+if (MaxValue>5400) {
+MaxValue=5400;
+return;
+}
+
+B2.beginPath();
+B2.moveTo((MaxValue/3)+l,t+h-HRng);
+B2.lineTo((MaxValue/3)+l-((1.5*HRng)*2),t+h);
+B2.lineTo((MaxValue/3)+l,t+h+HRng);
+B2.fill();
+if (MaxSel){
+B2.beginPath();
+B2.lineWidth=.5;
+B2.moveTo((MaxValue/3)+l,50);
+B2.lineTo((MaxValue/3)+l,t+h);
+B2.stroke();		
+}
+}
+
+function DrawBHandle(){
+
+var ts=0;
+if ((OptVal==0) || (!chkvlt) || (!chkTM)){
+return;
+}
+if (BLoc){
+B2.fillStyle=C_HSELECT;
+B2.strokeStyle=C_HSELECT;
+}
+else if (SLoc){
+B2.fillStyle=C_HSELECT;
+B2.strokeStyle=C_HSELECT;
+}
+else {
+B2.fillStyle=C_HCOLOR;
+B2.strokeStyle=C_HCOLOR;
+}
+
+if (!SLoc){
+py1=((BHandle[OptVal]+BatteryShift[OptVal])-lys)*(t-(h+t))/(ys-lys)+h+t;
+B2.beginPath();
+B2.arc(w+l,py1,4,0,2*Math.PI,false);
+B2.fill();
+}
+if (BLoc){
+B2.lineWidth=2;
+B2.beginPath();
+B2.arc(w+l,py1,8,1.25*Math.PI,1.75*Math.PI,false);
+B2.stroke();
+B2.beginPath();
+B2.arc(w+l,py1,8,.25*Math.PI,.75*Math.PI,false);
+B2.stroke();
+}
+if (!BLoc){
+ts=BLVolts[0]+BatteryShift[OptVal];
+py1=((ts)-lys)*(t-(h+t))/(ys-lys)+h+t;
+B2.beginPath();
+B2.arc(l+10,py1,4,0,2*Math.PI,false);
+B2.fill();
+}
+if (SLoc){
+B2.beginPath();
+B2.moveTo(l+5,py1+10);
+B2.lineTo(l+15,py1+10);
+B2.lineTo(l+10,py1+20);
+B2.fill();
+B2.beginPath();
+B2.moveTo(l+5,py1-10);
+B2.lineTo(l+15,py1-10);
+B2.lineTo(l+10,py1-20);
+B2.fill();
+B2.beginPath();
+B2.moveTo(l+10,py1+10);
+B2.lineTo(l+10,py1-10);
+B2.stroke();
+}
+
+B2.beginPath();
+py1=((BHandle[OptVal]+BatteryShift[OptVal])-lys)*(t-(h+t))/(ys-lys)+h+t;
+B2.fillStyle="#FFFEE0";
+B2.fillRect(w-30,py1+5,50,20);
+B2.textAlign="center";
+B2.font="16px Arial";
+B2.fillStyle="#000000";
+B2.fillText((BHandle[OptVal]+BatteryShift[OptVal]).toFixed(1),w-5,py1+22);
+B2.stroke();
+}
+
+function DrawEHandle(){
+if ((OptVal==0) || (!chknrg) || (!chkTM)){
+return;
+}
+
+if (ELoc){
+B2.fillStyle=C_HSELECT;
+B2.strokeStyle=C_HSELECT;
+}
+else {
+B2.fillStyle=C_HCOLOR;
+B2.strokeStyle=C_HCOLOR;
+}
+B2.beginPath();
+py1=(((EHandle[OptVal]*1)/25)-lys)*(t-(h+t))/(ys-lys)+h+t;
+py1=EHandle[OptVal];
+B2.arc(w+l,py1,4,0,2*Math.PI,false);
+B2.fill();
+B2.beginPath();
+B2.fillStyle="#FFFEE0";
+B2.fillRect(w-30,py1+5,50,20);
+B2.textAlign="center";
+B2.font="16px Arial";
+B2.fillStyle="#000000";
+B2.fillText(map(EHandle[OptVal],680,50,0,750).toFixed(0),w-5,py1+22);
+B2.stroke();
+if (ELoc){
+B2.beginPath();
+B2.lineWidth=2;
+B2.arc(w+l,py1,8,1.25*Math.PI,1.75*Math.PI,false);
+B2.stroke();
+B2.beginPath();
+B2.arc(w+l,py1,8,.25*Math.PI,.75*Math.PI,false);
+B2.stroke();
+}
+
+}
+
+function ClearB2() {
+B2.clearRect(0,0,TTCanvas.width,TTCanvas.height);
+DrawMinSlider();
+DrawMaxSlider();
+}
+
+function map( x,in_min,in_max,out_min,out_max) {
+return (x-in_min)*(out_max-out_min)/(in_max-in_min)+out_min;
+}
+
+function ProcessClick(event) {
+
+if (SLoc){	
+SSel=!SSel;
+ESel=false;
+ELoc=false;
+BColor=false;
+EColor=false;
+if (SSel){
+BColor=true;
+}
+else {
+DrawTrends();
+}
+}
+if (BLoc){	
+BSel=!BSel;
+ESel=false;
+ELoc=false;
+SSel=false;
+SLoc=false;
+BColor=false;
+EColor=false;
+if (BSel){
+BColor=true;
+}
+else {
+DrawTrends();
+}
+}
+if (ELoc){	
+ESel=!ESel;
+BSel=false;
+BLoc=false;
+BColor=false;
+EColor=false;
+EHandle[OptVal]=cy;
+if (ESel){
+EColor=true;
+}
+else {
+DrawTrends();
+}	
+}
+if (MinLoc){	
+MinSel=!MinSel;
+}
+if (MaxLoc){	
+MaxSel=!MaxSel;
+}
+}
+
+function ProcessDrag(event) {
+
+if (chkRL){
+return;
+}
+cx=Number(event.clientX);
+cy=Number(event.clientY);
+r=TTCanvas.getBoundingClientRect();
+cx=cx-r.left-l;
+cy=cy-r.top;
+if (MaxSel) {
+if (cx<50) {
+cx=50;
+}
+if (cx>w+l-80) {
+cx=w;
+}
+}
+else{
+if (cx>w) {
+cx=w;
+}
+}
+if (MinSel) {
+if (cx>1750) {
+cx=1750;
+}
+if (cx<70) {
+}
+}
+else{
+if (cx<0) {
+cx=0;
+}
+}
+if (cy<r_Top) {
+cx=w;
+}	
+
+if (chkTM) {
+BTemp=map(cy,680,50,0,30)-BatteryShift[OptVal];
+if (BSel){
+if ( (BTemp < 0) || (BTemp>BLVolts[0])) {
+return;
+}
+}
+if (ESel){
+if ( (cy < 50) || (cy>680)) {		
+return;
+}
+}
+
+if (Math.abs(cx-w)<=3) {
+
+if ((chkvlt) && (Math.abs(BTemp-BHandle[OptVal])<.5)) {	
+BLoc=true;
+DrawBHandle();				
+} 
+if ((chknrg) && (Math.abs(cy -EHandle[OptVal])<=10)) {
+ELoc=true;	
+DrawEHandle();
+}	
+else if ((Math.abs(cy -EHandle[OptVal])>10) && (Math.abs(BTemp-BHandle[OptVal])>=.5))  {
+BLoc=false;	
+ELoc=false;	
+SLoc=false;  
+DrawTrends();
+}	
+}
+else if ( (Math.abs((BLVolts[0])-BTemp) <= 2) && ((cx-20) < 8)&& ((cx)>0))  {
+SLoc=true;
+DrawBHandle();
+}
+else {
+BLoc=false;	
+ELoc=false;	
+SLoc=false;	
+DrawTrends();
+
+}
+if (SSel) {
+BatteryShift[OptVal]=map(cy,680,50,0,30);
+BatteryShift[OptVal]=BatteryShift[OptVal] - BLVolts[0];
+ClearB2();
+SLoc=true;
+DrawBHandle();
+ShowBTrend();
+}
+if (BSel) {
+BLoc=true;				
+BHandle[OptVal]=map(cy,680,50,0,30)-BatteryShift[OptVal] ;
+BScale[OptVal]=(map(BStart[OptVal],0,30,680,50)-cy) ;
+BScale[OptVal]=map(BScale[OptVal]+50,50,680,0,30)- BatteryShift[OptVal];
+DrawTrends();
+}
+if (ESel) {
+ELoc=true;
+EHandle[OptVal]=cy;
+EScale[OptVal]=ETemp - cy; 
+EScale[OptVal]=map(EScale[OptVal],0,630,0,750);
+DrawTrends();
+}
+}
+else {
+if ((cy>660)&&(cy<700)) {
+if (Math.abs((cx*3)-MinValue)<100) {
+if (!MaxSel){
+MinLoc=true;
+DrawMinSlider();
+RedrawRegion();	
+}
+}
+else {
+MinLoc=false;
+DrawMinSlider();
+}
+if (Math.abs((cx*3)-MaxValue)<100) {
+if (!MinSel){
+MaxLoc=true;
+DrawMaxSlider();
+RedrawRegion();	
+}
+}
+else {				
+MaxLoc=false;				
+DrawMaxSlider();
+}
+if (MinSel) {
+MinLoc=true;				
+DrawMinSlider();			
+}			
+if (MaxSel) {
+MaxLoc=true;
+DrawMaxSlider();			
+}
+}
+else {
+if (!MinSel){
+MinLoc=false;
+DrawMinSlider();
+}
+if (!MaxSel){
+MaxLoc=false;				
+DrawMaxSlider();
+}
+}
+ClearB2();
+if (MinSel) {
+MinValue=cx*3;
+DrawMinSlider();
+}
+if (MaxSel) {
+MaxValue=(cx)*3;
+DrawMaxSlider();
+}
+if (chkPM) {
+if (OptVal==0) {
+ShowTT();
+}
+if ((!MinSel)&&(!MaxSel)&&(OptVal !=0)) {
+ClearB2();
+ShowProbe();
+}
+}else{
+if (!ZoomedIn) {
+ClearB2();
+ShowTT();
+}
+}
+}
+}
+
+function ShowTT() {
+TTFound=false;
+if ((OptVal==0)||(OptVal==1)) {
+if (OptVal==1) {
+t=r_Top;
+h=630;
+}else{
+h=190;
+t=r_Top;
+}
+for (tt=0;tt<=r_LapsDP;tt++) {
+dx=Number(r_LapX[tt]);
+if ((chklamp)&& (!TTFound)){
+dy=Number(r_Lamp[tt]);
+suffix=" A";
+DrawTT();
+}
+if ((chklnrg)&&(!TTFound)){
+dy=Number(r_LNRG[tt]);
+suffix=" Whr";
+DrawTT();
+}
+if ((chklt)&&(!TTFound)){
+dy=Number(r_LTimes[tt]);
+suffix="1";
+DrawTT();
+}
+}
+}
+TTFound=false;
+if ((OptVal==0)||(OptVal==2)) {
+if (OptVal==2) {
+t=r_Top;
+h=630;
+}else{
+h=190;
+t=w_Top;
+}
+for (tt=0;tt<=w_LapsDP;tt++) {
+dx=Number(w_LapX[tt]);
+if ((chklamp)&&(!TTFound)){
+dy=Number(w_Lamp[tt]);
+suffix=" A";
+DrawTT();
+}
+if ((chklnrg)&&(!TTFound)){
+dy=Number(w_LNRG[tt]);
+suffix=" Whr";
+DrawTT();
+}
+if ((chklt)&&(!TTFound)){
+dy=Number(w_LTimes[tt]);
+suffix="1";
+DrawTT();
+}
+}
+}
+TTFound=false;
+if ((OptVal==0)||(OptVal==3)) {
+if (OptVal==3) {
+t=r_Top;
+h=630;
+}else{
+h=190;
+t=b_Top;
+}
+for (tt=0;tt<=b_LapsDP;tt++) {
+dx=Number(b_LapX[tt]);
+if ((chklamp)&&(!TTFound)){
+dy=Number(b_Lamp[tt]);
+suffix=" A";
+DrawTT();
+}
+if ((chklnrg)&& (!TTFound)){
+dy=Number(b_LNRG[tt]);
+suffix=" Whr";
+DrawTT();
+}
+if ((chklt)&&(!TTFound)){
+dy=Number(b_LTimes[tt]);
+suffix="1";
+DrawTT();
+}
+}
+}
+}
+
+function ShowProbe() {
+let sss=0;
+let left=0;
+if (MinValue<=0) {
+StPt=0;
+}
+if (MaxValue>=5400) {
+EndPoint=5400;
+}
+if (MinValue>0) {
+StPt=MinValue;
+}
+if (MaxValue<5400) {
+EndPoint=MaxValue;
+}
+sss=5400/(EndPoint-StPt);
+dx=(cx)*3;
+dx=(dx)/sss+StPt;
+dx=Math.round(dx,0);
+px=cx;
+if (OptVal==1) {
+if (chkvlt) {
+suffix=" V";
+sf=1;
+dy=Math.abs(r_Volt[dx]);
+DrawSTT();
+}
+if (chkamps) {
+suffix=" A";
+sf=1;
+dy=r_Amps[dx];
+DrawSTT();
+}
+if (chktemp) {
+suffix=" F";
+sf=10;
+dy=r_Tmp[dx];
+DrawSTT();
+sf=10;
+dy=r_TmpX[dx];
+DrawSTT();
+}
+if (chkspd) {
+suffix=" MPH";
+sf=1;
+dy=r_Spd[dx];
+DrawSTT();
+}
+if (chknrg) {
+suffix=" Whr";
+sf=25;
+dy=r_NRG[dx];
+DrawSTT();
+}
+if (chkalt) {
+suffix=" ft";
+sf=50;
+dy=r_Alt[dx];
+DrawSTT();
+}
+if (GfVal==1) {
+suffix=" G's (X,Forward)";
+sf=1;
+dy=r_GX[dx];
+DrawSTT();
+}
+if (GfVal==2) {
+suffix=" G's (Y,Lateral)";
+sf=1;
+dy=r_GY[dx];
+DrawSTT();
+}
+if (GfVal==3) {
+suffix=" G's (Z,Vertical)";
+sf=1;
+dy=r_GZ[dx];
+DrawSTT();
+}
+} else if (OptVal==2) {
+if (chkvlt) {
+suffix=" V";
+sf=1;
+dy=Math.abs(w_Volt[dx]);
+DrawSTT();
+}
+if (chkamps) {
+suffix=" A";
+sf=1;
+dy=w_Amps[dx];
+DrawSTT();
+}
+if (chktemp) {
+suffix=" F";
+sf=10;
+dy=w_Tmp[dx];
+DrawSTT();
+sf=10;
+dy=w_TmpX[dx];
+DrawSTT();
+}
+if (chkspd) {
+suffix=" MPH";
+sf=1;
+dy=w_Spd[dx];
+DrawSTT();
+}
+if (chknrg) {
+suffix=" Whr";
+sf=25;
+dy=Number(w_NRG[dx]);
+DrawSTT();
+}
+if (chkalt) {
+suffix=" ft";
+sf=50;
+dy=w_Alt[dx];
+DrawSTT();
+}
+if (GfVal==1) {
+suffix=" G's (X,Forward)";
+sf=1;
+dy=w_GX[dx];
+DrawSTT();
+}
+if (GfVal==2) {
+suffix=" G's (Y,Lateral)";
+sf=1;
+dy=w_GY[dx];
+DrawSTT();
+}
+if (GfVal==3) {
+suffix=" G's (Z,Vertical)";
+sf=1;
+dy=w_GZ[dx];
+DrawSTT();
+}
+} else if (OptVal==3) {
+if (chkvlt) {
+suffix=" V";
+sf=1;
+dy=Math.abs(b_Volt[dx]);
+DrawSTT();
+}
+if (chkamps) {
+suffix=" A";
+sf=1;
+dy=b_Amps[dx];
+DrawSTT();
+}
+if (chktemp) {
+suffix=" F";
+sf=10;
+dy=b_Tmp[dx];
+DrawSTT();
+sf=10;
+dy=b_TmpX[dx];
+DrawSTT();
+}
+if (chkspd) {
+suffix=" MPH";
+sf=1;
+dy=b_Spd[dx];
+DrawSTT();
+}
+if (chknrg) {
+suffix=" Whr";
+sf=25;
+dy=Number(b_NRG[dx]);
+DrawSTT();
+}
+if (chkalt) {
+suffix=" ft";
+sf=50;
+dy=b_Alt[dx];
+DrawSTT();
+}
+if (GfVal==1) {
+suffix=" G's (X,Forward)";
+sf=1;
+dy=b_GX[dx];
+DrawSTT();
+}
+if (GfVal==2) {
+suffix=" G's (Y,Lateral)";
+sf=1;
+dy=b_GY[dx];
+DrawSTT();
+}
+if (GfVal==3) {
+suffix=" G's (Z,Vertical)";
+sf=1;
+dy=b_GZ[dx];
+DrawSTT();
+}
+}
+}
+
+function DrawSTT() {
+GetPy();
+temp=0;
+if (dy>29.2) {
+temp=35;
+}
+if ((suffix==" Whr")||(suffix==" F")||(suffix==" ft")) {
+dy=parseInt(dy*sf);
+dval=dy+suffix;
+} else if (suffix.substring(0,4)==" G's") {
+dy=(dy-10)/10;
+dval=(Math.round((dy*100))/100).toFixed(2)+suffix;
+}else{
+dy=dy*sf;
+dval=(Math.round((dy*10))/10).toFixed(1)+suffix;
+}
+if (py>675) {
+py=675;
+}
+B2.beginPath();
+B2.strokeStyle="#ffffcc"
+B2.lineWidth=.5;
+B2.moveTo(cx+l,r_Top);
+B2.lineTo(cx+l,r_Top+630);
+B2.stroke();
+if ((cy>70)&&(cy<680)){
+TTTime=Math.floor(((cx*ScaleFactor[OptVal]/60) *3)+MinValue) ;
+minutes=Math.floor(TTTime/60);
+seconds=TTTime % 60;
+if (seconds<10) {
+TTTime=minutes+":"+"0"+seconds;
+}else{
+TTTime=minutes+":"+seconds;
+}
+tw=10+Math.ceil(B2.measureText(TTTime).width);
+B2.beginPath();
+B2.fillStyle="#ffffcc";
+B2.fillRect(px-2,cy-25,tw,18);
+B2.textAlign="center";
+B2.font="bold 16px Arial";
+B2.fillStyle="#000000";
+B2.fillText(TTTime,px+(tw/2)-2,cy-10);
+B2.beginPath();
+B2.strokeStyle="#DDDDDD";
+B2.rect(px-2,cy-25,tw,18);
+B2.stroke();
+tw=10+Math.ceil(B2.measureText(dval).width);
+B2.beginPath();
+B2.fillStyle="#FFFEE0";
+B2.fillRect(px,py-28+temp,tw,20);
+B2.textAlign="center";
+B2.font="16px Arial";
+B2.fillStyle="#000000";
+B2.fillText(dval,px+(tw/2),py-11+temp);
+}
+}
+
+function ShowETrend(){
+var tempx=0;
+if ((ZoomedIn)||(OptVal==0)){
+return;
+}
+dx1=.1;
+dx2=0;
+dx2=0;
+dy1=(ActualBLEnergy[0]);
+py1=(dy1-lys)*(t-(h+t))/(ys-lys)+h+t;
+B2.lineWidth=1;
+if (EColor){
+B2.strokeStyle=C_HSELECT;
+}
+else {
+B2.strokeStyle="#999999";
+}
+B2.setLineDash([10,5]);
+for (i=1;i<90;i++) {	
+dx2=i*1.01*60;		
+dy2=(ActualBLEnergy[i]+(EScale[OptVal]*(i/89)))/25;
+dx2=(((dx2)/ScaleFactor[OptVal])*60);
+px1=(dx1/3)+l;
+if (dy2 <=(ActualBLEnergy[89]/25)){
+tempx=i;
+}	
+py1=(dy1-lys)*(t-(h+t))/(ys-lys)+h+t;
+px2=(dx2/3)+l;
+py2=(dy2-lys)*(t-(h+t))/(ys-lys)+h+t;
+B2.beginPath();
+B2.moveTo(px1,py1);
+B2.lineTo(px2,py2);
+B2.stroke();
+dy1=dy2;
+dx1=dx2;
+}
+if (EColor){
+i=tempx;
+dx2=(i+1)*60;		
+dy2=(ActualBLEnergy[i]+(EScale[OptVal]*(i/90) ) )/25;
+DrawTrendLine(dx2,dy2);
+}
+B2.setLineDash([]);
+}
+
+function DrawTrendLine(dx2,dy2){
+B2.beginPath();
+B2.setLineDash([10,3]);
+B2.lineWidth=1;
+px2=(dx2/3)+l;
+py2=(dy2-lys)*(t-(h+t))/(ys-lys)+h+t;
+B2.moveTo(px2,py2);
+B2.lineTo(px2,680);
+B2.stroke();
+B2.setLineDash([]);
+B2.beginPath();
+B2.fillStyle="#FF0000";
+B2.arc(px2,py2+2,3,0,2*Math.PI,false);	
+B2.fill();
+temp=(dx2/60).toFixed(0);
+tw=10+Math.ceil(B2.measureText(temp).width);
+B2.beginPath();
+B2.fillStyle="#FFFEE0";
+B2.fillRect(px2-tw/2,650,tw,20);
+B2.textAlign="center";
+B2.font="16px Arial";
+B2.fillStyle="#000000";
+B2.fillText(temp,px2,667);
+}
+
+function ShowBTrend(){
+var tempx=0;
+var temp=0;
+if ((ZoomedIn)||(OptVal==0)){
+return;
+}
+dy2=((BLVolts[2]+BatteryShift[2])+(BScale[2]*(2/90) ) );
+dx1=.1;
+dx2=0;
+dx2=0;
+dy1=(BLVolts[0]+BatteryShift[OptVal]);
+py1=(dy1-lys)*(t-(h+t))/(ys-lys)+h+t;
+B2.lineWidth=1;
+if (BColor){
+B2.strokeStyle=C_HSELECT;
+B2.fillStyle="#AA0000";
+}
+else {
+B2.strokeStyle="#999999";
+B2.fillStyle="#999999";
+}
+B2.setLineDash([10,5]);
+for (i=1;i<90;i++) {	
+dx2=i*1.011*60;		
+dy2=((BLVolts[i]+BatteryShift[OptVal])+(BScale[OptVal]*(i/90) ) );
+if (dy2>=21){
+tempx=i;
+}
+dx2=(((dx2)/ScaleFactor[OptVal])*60);
+px1=(dx1/3)+l;
+py1=(dy1-lys)*(t-(h+t))/(ys-lys)+h+t;
+px2=(dx2/3)+l;
+py2=(dy2-lys)*(t-(h+t))/(ys-lys)+h+t;
+B2.beginPath();
+B2.moveTo(px1,py1);
+B2.moveTo(px1,py1);
+B2.lineTo(px2,py2);
+B2.stroke();
+dy1=dy2;
+dx1=dx2;
+}
+if (BColor){
+i=tempx;
+dx2=(i+1)*60;	
+dy2=((BLVolts[i]+BatteryShift[OptVal])+(BScale[OptVal]*(i/90) ) );
+DrawTrendLine(dx2,dy2);
+}
+B2.setLineDash([]);	
+}
+
+function DrawTT() {
+GetPx();
+GetPy();
+if ((suffix=="1"||suffix=="2")) {
+if (suffix=="1") {
+minutes=Math.floor((dy*25)/60);
+seconds=(dy*25) % 60;
+} else if (suffix=="2") {
+minutes=Math.floor(dy/60);
+seconds=dy % 60;
+}
+if (seconds<10) {
+dval=minutes+":"+"0"+seconds;
+}else{
+dval=minutes+":"+seconds;
+}
+}else{
+dval=dy+suffix;
+}
+temp=0;
+if (py<70) {
+temp=50;
+}
+tw=10+Math.ceil(B2.measureText(dval).width);
+if ((tx<=HRng)&&(ty<=HRng)) {
+B2.beginPath();
+B2.fillStyle="#FFFEE0";
+B2.fillRect(px-(tw/2)+l,py-40+temp,tw,20);
+B2.textAlign="center";
+B2.font="16px Arial";
+B2.fillStyle="#000000";
+B2.fillText(dval,px+l,py-23+temp);
+TTFound=true;
+B2.arc(px+l,py,4,0,2*Math.PI,false);
+B2.fillStyle="#FF0000";
+B2.fill();
+}
+}
+
+function GetPx() {
+px=Number((dx/ScaleFactor[OptVal])*(w/xs));
+tx=Math.abs(cx-px);
+}
+
+function GetPy() {
+py=(dy-lys)*(t-(h+t))/(ys-lys)+h+t;
+if (dy>ys) {
+py=(ys-lys)*(t-(h+t))/(ys-lys)+h+t;
+}
+py=Number(py);
+ty=Math.abs(py-cy);
+}
+
+function PlotDriverPosition(Laps, Location,DataPoint,LatArray,LonArray,DataArray,CAR){
+
+let x1,x2,y1,y2, High,Wide, Draw1, Draw2,Left,Right,Top,Bottom;
+
+if (CAR == 0){
+Left = r_left;
+Right=r_right;
+Top=r_top;
+Bottom=r_bottom;
+}
+else if (CAR == 1){
+Left = w_left;
+Right=w_right;
+Top=w_top;
+Bottom=w_bottom;
+}
+else if (CAR == 2){
+Left = b_left;
+Right=b_right;
+Top=b_top;
+Bottom=b_bottom;
+}
+
+
+if ((Laps == 0) || (DataPoint < 2)){
+return;
+}
+Draw1=true;
+Draw2=true;
+
+AR=Math.abs(Top - Bottom) / Math.abs(Left - Right);
+
+if (AR <=1){
+Wide=600 * AR;
+High=600;
+}
+else {
+Wide= 600 / AR;
+High=600;
+}
+if (PlotColor){
+GetColor(DataArray[Point]);
+}
+else {
+Red=255;
+Green=255;
+Blue=255;
+}
+
+x1=LonArray[DataPoint-1];
+y1=LatArray[DataPoint-1];
+if ((x1 == 0) || (y1 == 0)){
+Draw1=false;
+}
+x1=map(x1,Left,Right,0,Wide)+Location;
+y1=map(y1,Top,Bottom,High,0)+80;		
+
+x2=LonArray[DataPoint];
+y2=LatArray[DataPoint];
+if ((x2 == 0) || (y2 == 0)){
+Draw2=false;
+}
+x2=map(x2,Left,Right,0,Wide)+Location;
+y2=map(y2,Top,Bottom,High,0)+80;
+
+if ((Draw1) && (!Draw2)){
+B1.beginPath();
+B1.fillStyle=TrackColor;
+B1.arc(x1,y1,5,2*Math.PI,false);
+B1.fill();
+}
+
+if ((!Draw1) && (Draw2)){
+B1.beginPath();
+B1.fillStyle=TrackColor;
+B1.arc(x2,y2,5,2*Math.PI,false);
+B1.fill();
+}
+
+if ((Draw1) && (Draw2)){
+B1.beginPath();
+B1.lineWidth=4;	
+B1.strokeStyle="rgb("+Red+","+Green+","+Blue+")";  
+B1.moveTo(x1,y1);
+B1.lineTo(x2,y2);
+B1.stroke();
+
+B2.clearRect(Location-20,40,590,660);
+B2.beginPath();
+B2.fillStyle="rgb("+Red+","+Green+","+Blue+")";  
+B2.arc(x2,y2,7,2*Math.PI,false);
+B2.fill();	
+
+}
+}
+
+function RedrawDriverPosition(Laps, Location,MaxData,LatArray,LonArray,DataArray,DataStartPoint, CAR){
+  let x1,x2,y1,y2, High,Wide, Draw1, Draw2Left,Right,Top,Bottom;
+
+  if (CAR == 0){
+    Left = r_left;
+    Right=r_right;
+    Top=r_top;
+    Bottom=r_bottom;
+  }
+  else if (CAR == 1){
+    Left = w_left;
+    Right=w_right;
+    Top=w_top;
+    Bottom=w_bottom;
+  }
+  else if (CAR == 2){
+    Left = b_left;
+    Right=b_right;
+    Top=b_top;
+    Bottom=b_bottom;
+  }
+
+  if ((Laps == 0) || (MaxData < 1)){
+    return;
+  }
+
+  AR=Math.abs(Top - Bottom) / Math.abs(Left - Right);
+
+  if (AR <=1){
+    Wide=600 * AR;
+    High=600;
+  }
+  else {
+    Wide= 600 / AR;
+    High=600;
+  }
+
+  B1.lineWidth=4;	
+
+  for (i=2; i <= MaxData; i++){
+    if (PlotColor){
+      GetColor(DataArray[i + DataStartPoint]);
+    }
+    else {
+      Red=255;
+      Green=255;
+      Blue=255;
+    }
+    Draw1=true;
+    Draw2=true;
+
+    x1=LonArray[i-1];
+    y1=LatArray[i-1];
+
+    if ((x1 == 0) || (y1 == 0)){
+      Draw1=false;
+    }
+
+  x1=map(x1,Left,Right,0,Wide)+Location;
+  y1=map(y1,Top,Bottom,High,0)+80;		
+  x2=LonArray[i];
+  y2=LatArray[i];
+
+  if ((x2 == 0) || (y2 == 0)){
+    Draw2=false;
+  }
+
+  x2=map(x2,Left,Right,0,Wide)+Location;
+  y2=map(y2,Top,Bottom,High,0)+80;	
+
+  if ((Draw1) && (!Draw2)){
+    B1.beginPath();
+    B1.fillStyle=TrackColor;
+    B1.arc(x1,y1,5,2*Math.PI,false);
+    B1.fill();
+  }
+
+  if ((!Draw1) && (Draw2)){
+    B1.beginPath();
+    B1.fillStyle=TrackColor;
+    B1.arc(x2,y2,5,2*Math.PI,false);
+    B1.fill();
+  }
+  if ((Draw1) && (Draw2)){
+    B1.beginPath();
+    B1.lineWidth=4;	
+    B1.strokeStyle="rgb("+Red+","+Green+","+Blue+")";  
+    B1.moveTo(x1,y1);
+    B1.lineTo(x2,y2);
+    B1.stroke();
+  }
+
+}
+
+B2.clearRect(Location-20,40,590,660);
+B2.beginPath();
+B2.fillStyle="#FFFFFF";	
+B2.arc(x2,y2,4,2*Math.PI,false);
+B2.fill();	
+
+}
+
+function PlotTrack(Laps, Location,MaxData,LatArray,LonArray,CAR){
+
+let x1,x2,y1,y2,High,Wide,Text,Draw1, Draw2,Left,Right,Top,Bottom, TrackColor;
+
+if (CAR == 0){
+Left = r_left;
+Right=r_right;
+Top=r_top;
+Bottom=r_bottom;
+TrackColor = RED_TRACK;
+// north arrow
+B1.textAlign="left";
+B1.beginPath();
+B1.strokeStyle="#FFFFFF";
+B1.fillStyle="#FFFFFF";
+B1.moveTo(110,60);
+B1.lineTo(100,80);
+B1.lineTo(120,80);
+B1.fill();
+B1.font="24px Arial";
+B1.fillStyle="#FFFFFF";
+B1.fillText("N",102,100);
+
+	if (LegendText != "Location"){
+		B1.beginPath();
+		B1.fillStyle="#222222";
+		B1.fillRect(0,52,65,655);
+		B1.fill();
+		B1.font="16px Arial";
+		B1.fillStyle="#FFFFFF";
+		B1.fillText(LegendText,3,74);
+		B1.font="14px Arial";
+		for (i=0; i <=30; i++){
+			GetColor(i);
+			B1.fillStyle="rgb("+Red+","+Green+","+Blue+")"; 
+			B1.fillRect(10,680-(i *20),20,20)
+			B1.fillStyle="#FFFFFF";
+			B1.fillText(i,40,680-(i *20)+15);
+		}
+	}
+}
+else if (CAR == 1){
+Left = w_left;
+Right=w_right;
+Top=w_top;
+Bottom=w_bottom;
+TrackColor = WHITE_TRACK;
+}
+else if (CAR == 2){
+Left = b_left;
+Right=b_right;
+Top=b_top;
+Bottom=b_bottom;
+TrackColor = BLUE_TRACK;
+}
+
+if (Laps == 0){
+B1.font="32px Arial";
+B1.textAlign="left";
+B1.fillStyle=TrackColor;
+B1.fillText("Waiting for a complete lap...",50+Location,200);
+return;
+}
+
+B1.font="14px Arial";
+AR=Math.abs(Top - Bottom) / Math.abs(Left - Right);
+
+if (AR <=1){
+Wide=600 * AR;
+High=600;
+}
+else {
+Wide= 600 / AR;
+High=600;
+}
+
+B1.fillStyle="#FFFFFF";
+B1.lineWidth=2;	
+B1.strokeStyle="#FFFFFF";
+
+for (i=1; i < MaxData; i++){
+Draw1 =true;
+Draw2 =true;
+x1=LonArray[i-1];
+y1=LatArray[i-1];
+
+if ((x1 == 0) || (y1 == 0)){
+Draw1=false;
+}
+
+x1=map(x1,Left,Right,0,Wide)+Location;
+y1=map(y1,Top,Bottom,High,0)+80;		
+x2=LonArray[i];
+y2=LatArray[i];
+if ((x2 == 0) || (y2 == 0)){
+Draw2=false;
+}
+x2=map(x2,Left,Right,0,Wide)+Location;
+y2=map(y2,Top,Bottom,High,0)+80;	
+
+
+if ((Draw1) && (!Draw2)){
+B1.beginPath();
+B1.fillStyle="#FFFFFF";
+B1.arc(x1,y1,3,2*Math.PI,false);
+B1.fill();
+}
+
+if ((!Draw1) && (Draw2)){
+B1.beginPath();
+B1.fillStyle="#FFFFFF";
+B1.arc(x2,y2,3,2*Math.PI,false);
+B1.fill();
+}
+
+if ((Draw1) && (Draw2)){
+B1.beginPath();
+B1.moveTo(x1,y1);
+B1.lineTo(x2,y2);
+B1.stroke();		
+}
+}
+
+x1=LonArray[0];
+y1=LatArray[0];
+x1=map(x1,Left,Right,0,Wide)+Location;;
+y1=map(y1,Top,Bottom,High,0)+80;
+B1.beginPath();
+B1.moveTo(x1,y1);
+B1.lineTo(x2,y2);
+B1.stroke();
+
+B1.beginPath();
+B1.fillStyle="#FFFFFF";
+B1.arc(x1,y1,6,2*Math.PI,false);
+B1.fill();
+}
+
+function clamp(val,min,max) {
+return val>max ? max : val < min ? min : val;
+}
+
+function GetColor(val) {
+let a=0,b=0,c=0,d=0;
+b=(ys+lys) / 2.1;
+a=b - (ys - lys) * .1 ;
+c=b+(ys - lys) * .16 ;
+d=(ys+c) / 1.95;
+Red=clamp((255.0 / (c - b) * val) - ((b * 255.0) / (c - b)),0,255);
+if (val < a) {
+Green=clamp(255.0 / (a - lys) * val - (255.0 * lys) / (a - lys),0,255);
+}
+else if (val>c) {
+Green=clamp(255.0 / (c - ys) * val - (ys * 255.0) / (c - ys),0,255);
+}
+else {
+Green=255;
+}
+if (val < b) {
+Blue=clamp(255.0 / (a - b) * val - ((a * 255.0) / (a - b)),0,255);
+}
+else if (val>d) {
+Blue=clamp((val * 255.0 ) / (ys - d) - ((d * 255.0) / (ys-d)),0,240);
+}
+else {
+Blue=0;
+}
+}
+
+function DEBUG(Control, Data) {
+if (Control == 1) {
+document.getElementById('DB1').innerHTML=Data;
+} else if (Control == 2) {
+document.getElementById('DB2').innerHTML=Data;
+} else if (Control == 3) {
+document.getElementById('DB3').innerHTML=Data;
+} else if (Control == 4) {
+document.getElementById('DB4').innerHTML=Data;
+} else if (Control == 5) {
+document.getElementById('DB5').innerHTML=Data;
+} else if (Control == 6) {
+document.getElementById('DB6').innerHTML=Data;
+} else if (Control == 7) {
+document.getElementById('DB7').innerHTML=Data;
+} else if (Control == 8) {
+document.getElementById('DB8').innerHTML=Data;
+} else if (Control == 9) {
+document.getElementById('DB9').innerHTML=Data;
+} else if (Control == 10) {
+document.getElementById('DB10').innerHTML=Data;
+} else if (Control == 11) {
+document.getElementById('DB11').innerHTML=Data;
+}
+}
+
+
+</script>
+
